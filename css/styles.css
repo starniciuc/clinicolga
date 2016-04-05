@@ -650,7 +650,7 @@ body {
   max-width: 1071;
   margin-left: auto;
   margin-right: auto;
-  max-width: 1100px;
+  max-width: 1024px;
   width: 100%;
   margin-top: 0; }
   .wrapper:after {
@@ -667,12 +667,14 @@ p {
 a {
   text-decoration: none; }
 
+img {
+  display: block; }
+
 h1, h2, h3, h4, h5, h6 {
-  margin-top: 30px;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
   text-align: center;
   font-size: 32px;
-  line-height: 25px;
+  line-height: 30px;
   color: #000; }
 
 h2, h3, h4, h5, h6 {
@@ -681,12 +683,11 @@ h2, h3, h4, h5, h6 {
 h4, h5, h6 {
   font-size: 18px; }
 
-.slicknav_menu {
+.main-header .right-side-menu {
   display: none; }
 
 .main-header .header-content {
-  padding: 15px 0;
-  padding-bottom: 0; }
+  padding: 15px 0; }
   .main-header .header-content:before, .main-header .header-content:after {
     content: "";
     display: table; }
@@ -706,11 +707,18 @@ h4, h5, h6 {
     width: 32.0261437908%;
     float: left;
     margin-right: 1.9607843137%;
-    background: url(../images/navigation.png) no-repeat scroll left center;
     font-size: 18px;
     margin-top: 20px;
     text-transform: uppercase;
     text-align: center; }
+    .main-header .header-address .location:before {
+      content: " ";
+      background: url("../images/navigation.png") no-repeat;
+      display: block;
+      width: 25px;
+      height: 35px;
+      float: left;
+      margin-left: 15px; }
   .main-header .header-phone {
     width: 32.0261437908%;
     float: left;
@@ -743,35 +751,122 @@ h4, h5, h6 {
         text-decoration: none;
         transition: all 0.4s ease 0s; }
 
-.header-nav:before, .header-nav:after {
-  content: "";
-  display: table; }
-
-.header-nav:after {
-  clear: both; }
-
-.header-nav ul {
-  margin: 1.5em 0; }
-  .header-nav ul li {
+/***Menu*****/
+.header-nav {
+  height: 50px; }
+  .header-nav:before, .header-nav:after {
+    content: "";
+    display: table; }
+  .header-nav:after {
+    clear: both; }
+  .header-nav #mobile-header {
+    width: 100%;
+    background-color: #00AAC8;
+    position: absolute;
+    left: 0;
+    padding-right: 30px;
+    height: 50px;
+    display: none; }
+    .header-nav #mobile-header #responsive-menu-button {
+      float: right;
+      padding: 18px 0px;
+      cursor: pointer; }
+  .header-nav .primary_nav_wrap {
+    margin-top: 15px; }
+    .header-nav .primary_nav_wrap:before, .header-nav .primary_nav_wrap:after {
+      content: "";
+      display: table; }
+    .header-nav .primary_nav_wrap:after {
+      clear: both; }
+  .header-nav .primary_nav_wrap ul {
+    list-style: none;
+    position: relative;
+    float: left;
+    padding: 0;
+    margin: 0; }
+  .header-nav .primary_nav_wrap ul a {
+    display: block;
+    text-decoration: none;
+    color: #000;
+    padding: 0 14px; }
+  .header-nav .primary_nav_wrap ul li {
+    position: relative;
     display: inline-block;
     float: left;
     font-size: 12px;
-    height: 26px;
     line-height: 26px;
     text-decoration: none;
-    text-transform: uppercase; }
-    .header-nav ul li a {
-      border-radius: 7px;
-      color: #000000;
-      display: block;
-      padding: 0 4px;
-      text-decoration: none; }
+    text-transform: uppercase;
+    padding: 0 2px;
+    border-radius: 7px; }
+  .header-nav .primary_nav_wrap ul li:hover {
+    background: url(../images/knopka.png) repeat-x center; }
+  .header-nav .primary_nav_wrap ul li a:hover {
+    color: #fff; }
+  .header-nav .primary_nav_wrap ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    padding: 0; }
+  .header-nav .primary_nav_wrap ul ul li {
+    float: none;
+    width: 200px; }
+  .header-nav .primary_nav_wrap ul ul a {
+    line-height: 120%;
+    padding: 10px 15px; }
+  .header-nav .primary_nav_wrap ul ul ul {
+    top: 0;
+    left: 100%; }
+  .header-nav .primary_nav_wrap ul li:hover > ul {
+    display: block; }
 
+.primary_nav_wrap li > a:after {
+  margin-left: 5px;
+  content: '\25BC'; }
+
+.primary_nav_wrap li > a:only-child:after {
+  margin-left: 0;
+  content: ''; }
+
+.primary_nav_wrap li > ul li a:after {
+  margin-left: 5px;
+  content: '\25BA'; }
+
+.sidr-class-primary_nav_wrap li > a:after {
+  margin-left: 5px;
+  content: '\25BC'; }
+
+.sidr-class-primary_nav_wrap li > a:only-child:after {
+  margin-left: 0;
+  content: ''; }
+
+.sidr-class-primary_nav_wrap li > ul li a:after {
+  margin-left: 5px;
+  content: '\25BA'; }
+
+.sidr-class-primary_nav_wrap ul li ul li a:after {
+  margin-left: 5px;
+  content: '\25BC'; }
+
+.sidr-class-primary_nav_wrap li > ul li > ul a:after {
+  margin-left: 5px;
+  content: '\25BC'; }
+
+/**end menu**/
 .slide {
   background: url("../images/slide.jpg") no-repeat scroll center top;
   height: 200px;
   margin: 0 auto;
   width: 100%; }
+
+.cermet:before, .cermet:after {
+  content: "";
+  display: table; }
+
+.cermet:after {
+  clear: both; }
 
 .cermet h1, .cermet h2, .cermet h3, .cermet h4, .cermet h5, .cermet h6 {
   font-size: 46px; }
@@ -796,6 +891,9 @@ h4, h5, h6 {
     margin-right: 1.9607843137%;
     margin-left: 8.4967320261%;
     margin-right: 0; }
+    .cermet .description-inside .image img {
+      width: 100%;
+      max-width: 245px; }
   .cermet .description .button {
     padding: 12px;
     font-size: 16px;
@@ -839,6 +937,9 @@ h4, h5, h6 {
     width: 32.0261437908%;
     float: left;
     margin-right: 1.9607843137%; }
+    .cermet-advantages .description .image img {
+      width: 100%;
+      max-width: 300px; }
   .cermet-advantages .description .text {
     width: 66.0130718954%;
     float: left;
@@ -865,22 +966,24 @@ h4, h5, h6 {
     width: 49.0196078431%;
     float: left;
     margin-right: 1.9607843137%;
-    margin-top: 20px; }
+    margin-top: 12px; }
     .popular-cermet .cermet-part .cermet-left ul {
       margin-left: 0; }
       .popular-cermet .cermet-part .cermet-left ul li {
-        background: url("../images/knopka21.png") no-repeat;
+        background-image: -o-linear-gradient(to bottom, #00C2D8 0%, #0096BB 100%);
+        background-image: -moz-linear-gradient(to bottom, #00C2D8 0%, #0096BB 100%);
+        background-image: -webkit-linear-gradient(to bottom, #00C2D8 0%, #0096BB 100%);
+        background-image: linear-gradient(to bottom, #00C2D8 0%, #0096BB 100%);
         color: #ffffff;
-        font-size: 18px;
+        font-size: 17px;
         font-weight: bold;
-        height: 62px;
         list-style: outside none none;
         line-height: 1.1;
-        margin-top: 10px;
-        padding-left: 13px;
-        padding-top: 10px;
+        margin-top: 20px;
         text-shadow: 1px 1px 1px #000000;
-        max-width: 366px; }
+        border-radius: 6px;
+        padding: 10px;
+        width: 100%; }
   .popular-cermet .cermet-part .cermet-right {
     width: 49.0196078431%;
     float: left;
@@ -903,7 +1006,6 @@ h4, h5, h6 {
     .prosthesis-types .type-list ul li {
       background: url("../images/confirm.png") no-repeat scroll left center;
       font-size: 16px;
-      height: 50px;
       list-style: outside none none;
       margin-top: 18px;
       padding-left: 56px;
@@ -923,9 +1025,14 @@ h4, h5, h6 {
       margin-left: 15px; }
 
 .prosthesis-examples {
-  background: url(../images/block_bg_2.jpg) no-repeat;
-  min-height: 383px;
+  background-image: -o-linear-gradient(to right, #B6E2EB 0%, #CFEDEF 100%);
+  background-image: -moz-linear-gradient(to right, #B6E2EB 0%, #CFEDEF 100%);
+  background-image: -webkit-linear-gradient(to right, #B6E2EB 0%, #CFEDEF 100%);
+  background-image: linear-gradient(to right, #B6E2EB 0%, #CFEDEF 100%);
   width: 100%; }
+  .prosthesis-examples .prosthesis-examples-inside {
+    padding-top: 50px;
+    padding-bottom: 20px; }
 
 .methods-prosthesis {
   padding: 30px 0; }
@@ -949,7 +1056,10 @@ h4, h5, h6 {
     vertical-align: top; }
 
 .appointments {
-  background: url(../images/block_bg_3.jpg) no-repeat scroll 0 0;
+  background-image: -o-linear-gradient(to right, #b7e4ea 0%, #d0eced 100%);
+  background-image: -moz-linear-gradient(to right, #b7e4ea 0%, #d0eced 100%);
+  background-image: -webkit-linear-gradient(to right, #b7e4ea 0%, #d0eced 100%);
+  background-image: linear-gradient(to right, #b7e4ea 0%, #d0eced 100%);
   margin: 0 auto;
   width: 100%;
   position: relative;
@@ -1014,106 +1124,107 @@ h4, h5, h6 {
     float: right;
     vertical-align: top; }
 
-.clinic-services h2, .clinic-services h3, .clinic-services h4, .clinic-services h5, .clinic-services h6 {
-  background: url(../images/akcia.png) no-repeat scroll left center;
-  font-size: 30px;
-  font-weight: normal;
-  height: 40px;
-  line-height: 40px;
-  margin: 31px auto 0;
-  padding-left: 44px;
-  max-width: 631px; }
-
-.clinic-services .all-shares-button {
-  height: 43px;
-  left: 55%;
-  line-height: 43px;
-  margin-left: 224px;
-  margin-top: -39px;
-  position: absolute;
-  text-align: center;
-  width: 113px; }
-  .clinic-services .all-shares-button a {
-    transition: all 0.4s ease 0s;
-    border: 1px solid #0095b9;
-    border-radius: 6px;
-    color: #0095b9;
-    display: block;
-    font-size: 18px;
-    font-weight: bold;
-    text-decoration: none; }
-
-.clinic-services .clinic-services-inside {
-  padding: 30px 0;
-  width: 83.0065359477%;
-  float: left;
-  margin-right: 1.9607843137%;
-  margin-left: 8.4967320261%; }
-  .clinic-services .clinic-services-inside:before, .clinic-services .clinic-services-inside:after {
-    content: "";
-    display: table; }
-  .clinic-services .clinic-services-inside:after {
-    clear: both; }
-  .clinic-services .clinic-services-inside .service {
-    width: 32.0261437908%;
-    float: left;
-    margin-right: 1.9607843137%; }
-    .clinic-services .clinic-services-inside .service-inside {
-      max-width: 232px;
-      background: url(../images/figura16s.png) no-repeat scroll 0 0;
-      height: 286px;
+.clinic-services {
+  border-top: 1px dashed #e6e6e6; }
+  .clinic-services h2, .clinic-services h3, .clinic-services h4, .clinic-services h5, .clinic-services h6 {
+    background: url(../images/akcia.png) no-repeat scroll left center;
+    font-size: 30px;
+    font-weight: normal;
+    height: 40px;
+    line-height: 40px;
+    margin: 31px auto 0;
+    padding-left: 44px;
+    max-width: 631px; }
+  .clinic-services .all-shares-button {
+    height: 43px;
+    left: 55%;
+    line-height: 43px;
+    margin-left: 224px;
+    margin-top: -39px;
+    position: absolute;
+    text-align: center;
+    width: 113px; }
+    .clinic-services .all-shares-button a {
+      transition: all 0.4s ease 0s;
+      border: 1px solid #0095b9;
       border-radius: 6px;
-      margin: 0 auto; }
-    .clinic-services .clinic-services-inside .service-image {
-      padding: 7px;
-      padding-bottom: 0; }
-      .clinic-services .clinic-services-inside .service-image img {
-        border-radius: 6px; }
-    .clinic-services .clinic-services-inside .service-description {
-      color: #3d3d3d;
-      font-size: 14px;
+      color: #0095b9;
+      display: block;
+      font-size: 18px;
       font-weight: bold;
-      padding: 6px 10px 0;
-      text-align: center; }
-  .clinic-services .clinic-services-inside .discount-service {
-    width: 32.0261437908%;
+      text-decoration: none; }
+  .clinic-services .clinic-services-inside {
+    padding: 30px 0;
+    width: 83.0065359477%;
     float: left;
     margin-right: 1.9607843137%;
-    margin-right: 0; }
-    .clinic-services .clinic-services-inside .discount-service .discount-service-inside {
-      max-width: 232px;
-      background: url(../images/figura16.png) no-repeat scroll 0 0;
-      margin: 0 auto;
-      height: 286px;
-      border-radius: 6px; }
-    .clinic-services .clinic-services-inside .discount-service .discount-header {
-      color: #3d3d3d;
-      font-size: 24px;
-      font-weight: 500;
-      height: 55px;
-      line-height: 1.2;
-      padding: 9px 20px 0;
-      text-align: center; }
-    .clinic-services .clinic-services-inside .discount-service .discount-content {
-      color: #3d3d3d;
-      font-size: 24px;
-      font-weight: bold;
-      height: 53px;
-      margin-top: 112px;
-      text-align: center;
-      text-transform: uppercase; }
-    .clinic-services .clinic-services-inside .discount-service .discount-footer {
-      font-size: 12px;
-      padding: 6px 10px 0;
-      text-align: justify; }
+    margin-left: 8.4967320261%; }
+    .clinic-services .clinic-services-inside:before, .clinic-services .clinic-services-inside:after {
+      content: "";
+      display: table; }
+    .clinic-services .clinic-services-inside:after {
+      clear: both; }
+    .clinic-services .clinic-services-inside .service {
+      width: 32.0261437908%;
+      float: left;
+      margin-right: 1.9607843137%; }
+      .clinic-services .clinic-services-inside .service-inside {
+        max-width: 232px;
+        background: url(../images/figura16s.png) no-repeat scroll 0 0;
+        height: 286px;
+        border-radius: 6px;
+        margin: 0 auto; }
+      .clinic-services .clinic-services-inside .service-image {
+        padding: 7px;
+        padding-bottom: 0; }
+        .clinic-services .clinic-services-inside .service-image img {
+          border-radius: 6px;
+          width: 100%; }
+      .clinic-services .clinic-services-inside .service-description {
+        color: #3d3d3d;
+        font-size: 14px;
+        font-weight: bold;
+        padding: 6px 10px 0;
+        text-align: center; }
+    .clinic-services .clinic-services-inside .discount-service {
+      margin-right: 0; }
+      .clinic-services .clinic-services-inside .discount-service .discount-service-inside {
+        max-width: 232px;
+        background: url(../images/figura16.png) no-repeat scroll 0 0;
+        margin: 0 auto;
+        height: 286px;
+        border-radius: 6px; }
+      .clinic-services .clinic-services-inside .discount-service .discount-header {
+        color: #3d3d3d;
+        font-size: 24px;
+        font-weight: 500;
+        height: 55px;
+        line-height: 1.2;
+        padding: 9px 20px 0;
+        text-align: center; }
+      .clinic-services .clinic-services-inside .discount-service .discount-content {
+        color: #3d3d3d;
+        font-size: 24px;
+        font-weight: bold;
+        height: 53px;
+        margin-top: 112px;
+        text-align: center;
+        text-transform: uppercase; }
+      .clinic-services .clinic-services-inside .discount-service .discount-footer {
+        font-size: 12px;
+        padding: 6px 10px 0;
+        text-align: justify; }
 
 .contact-info {
-  background: url(../images/block_bg_4.jpg) no-repeat scroll center top;
+  background-image: -o-linear-gradient(to right, #32a1ce 0%, #89e3ec 100%);
+  background-image: -moz-linear-gradient(to right, #32a1ce 0%, #89e3ec 100%);
+  background-image: -webkit-linear-gradient(to right, #32a1ce 0%, #89e3ec 100%);
+  background-image: linear-gradient(to right, #32a1ce 0%, #89e3ec 100%);
   padding: 20px 0; }
   .contact-info .contact-info-title {
     color: #00adca;
     font-size: 18px;
-    padding-top: 11px;
+    padding-top: 15px;
     text-align: center; }
   .contact-info .contact-info-inside {
     background: #fdfdfd no-repeat;
@@ -1124,7 +1235,12 @@ h4, h5, h6 {
     .contact-info .contact-info-inside:after {
       clear: both; }
     .contact-info .contact-info-inside .contact-info-blocks {
-      padding: 0 20px; }
+      padding: 20px 20px 15px; }
+      .contact-info .contact-info-inside .contact-info-blocks:before, .contact-info .contact-info-inside .contact-info-blocks:after {
+        content: "";
+        display: table; }
+      .contact-info .contact-info-inside .contact-info-blocks:after {
+        clear: both; }
       .contact-info .contact-info-inside .contact-info-blocks .phone {
         width: 32.0261437908%;
         float: left;
@@ -1143,7 +1259,7 @@ h4, h5, h6 {
           margin-top: 10px;
           padding-left: 26px; }
       .contact-info .contact-info-inside .contact-info-blocks .call {
-        width: 32.0261437908%;
+        width: 40.522875817%;
         float: left;
         margin-right: 1.9607843137%; }
         .contact-info .contact-info-inside .contact-info-blocks .call .call-info {
@@ -1161,10 +1277,14 @@ h4, h5, h6 {
             text-decoration: none;
             transition: all 0.4s ease 0s; }
       .contact-info .contact-info-inside .contact-info-blocks .receive-letter {
-        width: 32.0261437908%;
+        width: 23.5294117647%;
         float: left;
         margin-right: 1.9607843137%;
-        margin-right: 0; }
+        margin-right: 0;
+        margin-top: -12px; }
+        .contact-info .contact-info-inside .contact-info-blocks .receive-letter .receive-text {
+          text-align: center;
+          line-height: 1.1; }
         .contact-info .contact-info-inside .contact-info-blocks .receive-letter .receive-button {
           background: url(../images/knopka5.png) no-repeat scroll center center;
           height: 52px;
@@ -1275,7 +1395,9 @@ SLIDER
 #owl-demo-bottom .item-bottom-slider img {
   display: block;
   width: 100%;
-  height: auto; }
+  height: auto;
+  max-width: 460px;
+  margin: 0 auto; }
 
 .img-price {
   width: 50%;
@@ -1305,7 +1427,6 @@ SLIDER
       padding: 15px 25px;
       background: #6d9aee;
       text-transform: uppercase;
-      font-family: 'Roboto Black';
       color: #fff;
       border: 1px solid #6d9aee;
       -webkit-transition: background 0.7s ease;
@@ -1395,41 +1516,92 @@ SLIDER
 .adults-dentistry .discount-button {
   text-align: center; }
 
-.adults-dentistry .adults-dentistry-offers:before, .adults-dentistry .adults-dentistry-offers:after {
-  content: "";
-  display: table; }
-
-.adults-dentistry .adults-dentistry-offers:after {
-  clear: both; }
-
-.adults-dentistry .adults-dentistry-offers .offer {
-  width: 23.5294117647%;
-  float: left;
-  margin-right: 1.9607843137%; }
-  .adults-dentistry .adults-dentistry-offers .offer:nth-child(4n) {
-    margin-right: 0; }
-  .adults-dentistry .adults-dentistry-offers .offer .offer-description {
-    text-align: center; }
+.adults-dentistry .adults-dentistry-offers {
+  padding: 37px 0; }
+  .adults-dentistry .adults-dentistry-offers:before, .adults-dentistry .adults-dentistry-offers:after {
+    content: "";
+    display: table; }
+  .adults-dentistry .adults-dentistry-offers:after {
+    clear: both; }
+  .adults-dentistry .adults-dentistry-offers .offer {
+    width: 23.5294117647%;
+    float: left;
+    border: 1px solid #ededed;
+    border-radius: 6px;
+    margin-bottom: 8px; }
+    .adults-dentistry .adults-dentistry-offers .offer:nth-child(4n + 1) {
+      margin-left: 0;
+      margin-right: -100%;
+      clear: both;
+      margin-left: 0; }
+    .adults-dentistry .adults-dentistry-offers .offer:nth-child(4n + 2) {
+      margin-left: 25.4901960784%;
+      margin-right: -100%;
+      clear: none; }
+    .adults-dentistry .adults-dentistry-offers .offer:nth-child(4n + 3) {
+      margin-left: 50.9803921569%;
+      margin-right: -100%;
+      clear: none; }
+    .adults-dentistry .adults-dentistry-offers .offer:nth-child(4n + 4) {
+      margin-left: 76.4705882353%;
+      margin-right: -100%;
+      clear: none; }
+    .adults-dentistry .adults-dentistry-offers .offer:nth-child(4n) {
+      margin-right: 0; }
+    .adults-dentistry .adults-dentistry-offers .offer .offer-description {
+      text-align: center; }
+      .adults-dentistry .adults-dentistry-offers .offer .offer-description .offer-title {
+        font-size: 18px;
+        padding: 15px 0 5px; }
+        .adults-dentistry .adults-dentistry-offers .offer .offer-description .offer-title:after {
+          border-bottom: 3px solid #69dce9;
+          content: '';
+          width: 150px;
+          display: block;
+          margin: 0 auto;
+          margin-top: 10px; }
 
 .show-offer {
   position: relative; }
+  .show-offer a {
+    color: #69dce9; }
   .show-offer:before {
-    content: ' ▶'; }
+    content: '\f105';
+    color: #69dce9;
+    font-family: FontAwesome;
+    font-weight: bold;
+    font-size: larger;
+    padding: 7px; }
   .show-offer:hover:before {
-    content: '\25bc'; }
+    content: '\f107';
+    font-family: FontAwesome;
+    font-size: larger;
+    padding: 7px; }
 
 .list-to-show {
-  margin-left: 0;
   text-align: left;
   left: 0;
   display: none;
   position: absolute;
-  top: 20px;
+  top: 21px;
   z-index: 1;
   background-color: #ffffff;
-  padding: 20px; }
+  padding: 20px;
+  padding-bottom: 0;
+  width: 100%; }
+  .list-to-show ul {
+    margin-left: 0; }
+    .list-to-show ul li a {
+      color: #69dce9; }
+  .list-to-show .hide:after {
+    content: '✖';
+    font-size: 17px;
+    position: absolute;
+    top: 0;
+    right: 15px;
+    color: #69dce9; }
 
-ul.list-to-show li {
+.list-to-show li {
   float: none;
   width: 100%;
   list-style: none;
@@ -1467,17 +1639,251 @@ ul.list-to-show li {
   visibility: visible;
   opacity: 1; }
 
+.save-with-us h2, .save-with-us h3, .save-with-us h4, .save-with-us h5, .save-with-us h6 {
+  font-size: 30px; }
+
+.save-with-us .save-offer {
+  padding: 35px 0 60px; }
+  .save-with-us .save-offer:before, .save-with-us .save-offer:after {
+    content: "";
+    display: table; }
+  .save-with-us .save-offer:after {
+    clear: both; }
+  .save-with-us .save-offer .save-offer-inside {
+    background-image: -o-linear-gradient(to bottom, #00c3da 0%, #0097bb 100%);
+    background-image: -moz-linear-gradient(to bottom, #00c3da 0%, #0097bb 100%);
+    background-image: -webkit-linear-gradient(to bottom, #00c3da 0%, #0097bb 100%);
+    background-image: linear-gradient(to bottom, #00c3da 0%, #0097bb 100%);
+    width: 18.4%;
+    float: left;
+    margin-right: 1.9607843137%;
+    text-align: center;
+    color: #ffffff;
+    padding: 15px;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 8px 6px -6px black;
+    -moz-box-shadow: 0 8px 6px -6px black;
+    box-shadow: 0 8px 6px -6px black; }
+    .save-with-us .save-offer .save-offer-inside:last-child {
+      margin-right: 0; }
+
+.about {
+  border-top: 1px dashed #e6e6e6;
+  min-height: 275px; }
+
 /*adults-dentistry page end*/
-@media screen and (max-width: 1230px) {
+/*Start Responsive*/
+@media only screen and (max-width: 1080px) {
   .wrapper {
     padding-right: 30px;
-    padding-left: 30px; } }
-
-@media screen and (max-width: 480px) {
-  img.method-image {
+    padding-left: 30px; }
+  .main-header .primary_nav_wrap {
+    display: none; }
+  .footer-menu .header-nav {
+    display: none; }
+  .header-nav #mobile-header {
     display: block;
+    float: right; }
+  .sidr ul li ul {
+    display: none; } }
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+  .popular-cermet .cermet-part {
     width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0; }
+  .image-item {
+    width: 100%; }
+  .item-content {
+    width: 100%; }
+  .adults-dentistry .adults-dentistry-offers .offer {
+    width: 32.0261437908%;
+    float: left; }
+    .adults-dentistry .adults-dentistry-offers .offer:nth-child(3n + 1) {
+      margin-left: 0;
+      margin-right: -100%;
+      clear: both;
+      margin-left: 0; }
+    .adults-dentistry .adults-dentistry-offers .offer:nth-child(3n + 2) {
+      margin-left: 33.9869281046%;
+      margin-right: -100%;
+      clear: none; }
+    .adults-dentistry .adults-dentistry-offers .offer:nth-child(3n + 3) {
+      margin-left: 67.9738562092%;
+      margin-right: -100%;
+      clear: none; }
+  .clinic-services .clinic-services-inside {
+    margin: 0;
+    width: 100%; }
+  .contact-info .contact-info-inside .contact-info-blocks .phone {
+    width: 49.0196078431%;
+    float: left;
+    margin-right: 1.9607843137%; }
+  .contact-info .contact-info-inside .contact-info-blocks .call {
+    width: 49.0196078431%;
+    float: left;
+    margin-right: 1.9607843137%;
+    margin-right: 0; }
+  .contact-info .contact-info-inside .contact-info-blocks .receive-letter {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 30px; } }
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+  .cermet-advantages .description .image {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0; }
+    .cermet-advantages .description .image img {
+      display: block;
+      margin: 0 auto; }
+  .cermet-advantages .description .text {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0; }
+  .appointments .appointments-text {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
+    margin-top: 10px; }
+  .appointments .appointments-form-input {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
+    margin-top: 15px; }
+  .methods-prosthesis .first-method .method-description img,
+  .methods-prosthesis .last-method .method-description img,
+  .advantages-clinic .advantages-description img {
+    display: block;
+    margin: 0 auto;
+    float: none; }
+  .cermet .description-inside .text {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0; }
+  .cermet .description-inside .image {
+    display: none; } }
+
+@media only screen and (max-width: 720px) {
+  .clinic-services, .contact-info {
+    display: none; }
+  .main-header .header-logo {
+    width: 49.0196078431%;
+    float: left;
+    margin-right: 1.9607843137%; }
+  .main-header .header-address {
+    display: none; }
+  .main-header .header-phone {
+    width: 49.0196078431%;
+    float: left;
+    margin-right: 1.9607843137%;
+    float: right;
+    margin-right: 0; } }
+
+@media only screen and (max-width: 640px) {
+  .prosthesis-types .type-list {
+    margin-bottom: 20px; }
+    .prosthesis-types .type-list ul {
+      margin: 0; }
+  .popular-cermet .cermet-part {
+    padding: 0; }
+  .popular-cermet .cermet-part .cermet-left {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center; }
+  .popular-cermet .cermet-part .cermet-right {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0; }
+    .popular-cermet .cermet-part .cermet-right img {
+      width: 100%; }
+  .cermet .description {
+    padding: 10px; }
+  .adults-dentistry .adults-dentistry-offers .offer {
+    width: 49.0196078431%;
+    float: left; }
+    .adults-dentistry .adults-dentistry-offers .offer:nth-child(2n + 1) {
+      margin-left: 0;
+      margin-right: -100%;
+      clear: both;
+      margin-left: 0; }
+    .adults-dentistry .adults-dentistry-offers .offer:nth-child(2n + 2) {
+      margin-left: 50.9803921569%;
+      margin-right: -100%;
+      clear: none; }
+  .save-with-us .save-offer .save-offer-inside {
+    width: 100%;
+    margin-bottom: 15px; }
+  .methods-prosthesis .first-method .method-description img,
+  .methods-prosthesis .last-method .method-description img,
+  .advantages-clinic .advantages-description img {
+    width: 100%; }
+  .footer-copyright .copyright-left-side {
     float: none;
-    margin: 0 auto 20px !important; } }
+    text-align: center; }
+  .footer-copyright .copyright-right-side {
+    float: none;
+    text-align: center; }
+  .footer-copyright {
+    padding-top: 15px;
+    padding-bottom: 20px; } }
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+  .main-header .header-logo {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0; }
+    .main-header .header-logo img {
+      margin: 0 auto; }
+  .main-header .header-phone {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0; }
+  .main-header .header-phone .phone-link {
+    display: none; }
+  .main-header .header-phone .phone-number {
+    float: none;
+    margin: 0 auto; }
+  .cermet-advantages .advantages-list-inside ul {
+    margin: 0 0 1.5em 1em; }
+  .adults-dentistry .adults-dentistry-offers .offer {
+    width: 100%;
+    float: left;
+    float: none; }
+    .adults-dentistry .adults-dentistry-offers .offer:nth-child(1n + 1) {
+      margin-left: 0;
+      margin-right: -100%;
+      clear: none; }
+  .wrapper {
+    padding-left: 20px;
+    padding-right: 20px; }
+  .header-nav #mobile-header {
+    padding-right: 20px; } }
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width: 320px) {
+  .wrapper {
+    padding-left: 10px;
+    padding-right: 10px; }
+  .header-nav #mobile-header {
+    padding-right: 10px; } }
 
 /*# sourceMappingURL=styles.css.map */

@@ -22,6 +22,13 @@
   transition: $trans;
 }
 
+@mixin linear-gradient-b($args...) {
+  background-image: -o-linear-gradient($args);
+  background-image: -moz-linear-gradient($args);
+  background-image: -webkit-linear-gradient($args);
+  background-image: linear-gradient($args);
+}
+
 @mixin rgba() {
   background-color: rgba(0, 0, 0, 0.6);
   background: rgba(0, 0, 0, 0.6);
@@ -82,7 +89,7 @@ body {
 
 .wrapper {
   @include container();
-  max-width: 1100px;
+  max-width: 1024px;
   width: 100%;
   margin-top: 0;
 }
@@ -100,14 +107,15 @@ a {
 
 img {
   //width: 100%;
+  display: block;
 }
 
 h1 {
-  margin-top: 30px;
-  margin-bottom: 16px;
+
+  margin-bottom: 20px;
   text-align: center;
   font-size: 32px;
-  line-height: 25px;
+  line-height: 30px;
   color: #000;
 }
 
@@ -126,15 +134,13 @@ h4, h5, h6 {
   font-size: 18px;
 }
 
-.slicknav_menu {
-  display: none;
-}
-
 .main-header {
+  .right-side-menu {
+    display: none;
+  }
   .header-content {
     @include clearfix();
     padding: 15px 0;
-    padding-bottom: 0
   }
   .header {
     @include span(12);
@@ -143,11 +149,19 @@ h4, h5, h6 {
     }
     &-address {
       @include span(4);
-      background: url(../images/navigation.png) no-repeat scroll left center;
       font-size: 18px;
       margin-top: 20px;
       text-transform: uppercase;
       text-align: center;
+      .location:before {
+        content: " ";
+        background: url('../images/navigation.png') no-repeat;
+        display: block;
+        width: 25px;
+        height: 35px;
+        float: left;
+        margin-left: 15px;
+      }
     }
     &-phone {
       @include span(4);
@@ -181,28 +195,142 @@ h4, h5, h6 {
   }
 }
 
+/***Menu*****/
+
 .header-nav {
   @include clearfix;
-  ul {
-    margin: 1.5em 0;
-    li {
-      display: inline-block;
-      float: left;
-      font-size: 12px;
-      height: 26px;
-      line-height: 26px;
-      text-decoration: none;
-      text-transform: uppercase;
-      a {
-        border-radius: 7px;
-        color: #000000;
-        display: block;
-        padding: 0 4px;
-        text-decoration: none;
-      }
+  height: 50px;
+
+  #mobile-header {
+    width: 100%;
+    background-color: #00AAC8;
+    position: absolute;
+    left: 0;
+    padding-right: 30px;
+    height: 50px;
+    display: none;
+    #responsive-menu-button {
+      float: right;
+      padding: 18px 0px;
+      cursor: pointer;
     }
   }
+
+  .primary_nav_wrap {
+    @include clearfix();
+    margin-top: 15px;
+  }
+
+  .primary_nav_wrap ul {
+    list-style: none;
+    position: relative;
+    float: left;
+    padding: 0;
+    margin: 0;
+  }
+
+  .primary_nav_wrap ul a {
+    display: block;
+    text-decoration: none;
+    color: #000;
+    padding: 0 14px;
+  }
+
+  .primary_nav_wrap ul li {
+    position: relative;
+    display: inline-block;
+    float: left;
+    font-size: 12px;
+    line-height: 26px;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0 2px;
+    border-radius: 7px;
+  }
+
+  .primary_nav_wrap ul li.current-menu-item {
+
+  }
+
+  .primary_nav_wrap ul li:hover {
+    background: url(../images/knopka.png) repeat-x center;
+  }
+
+  .primary_nav_wrap ul li a:hover {
+    color: #fff;
+  }
+
+  .primary_nav_wrap ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    padding: 0
+  }
+
+  .primary_nav_wrap ul ul li {
+    float: none;
+    width: 200px
+  }
+
+  .primary_nav_wrap ul ul a {
+    line-height: 120%;
+    padding: 10px 15px
+  }
+
+  .primary_nav_wrap ul ul ul {
+    top: 0;
+    left: 100%
+  }
+
+  .primary_nav_wrap ul li:hover > ul {
+    display: block
+  }
+
 }
+
+.primary_nav_wrap li > a:after {
+  margin-left: 5px;
+  content: '\25BC';
+}
+
+.primary_nav_wrap li > a:only-child:after {
+  margin-left: 0;
+  content: '';
+}
+
+.primary_nav_wrap li > ul li a:after {
+  margin-left: 5px;
+  content: '\25BA';
+}
+
+.sidr-class-primary_nav_wrap li > a:after {
+  margin-left: 5px;
+  content: '\25BC';
+}
+
+.sidr-class-primary_nav_wrap li > a:only-child:after {
+  margin-left: 0;
+  content: '';
+}
+
+.sidr-class-primary_nav_wrap li > ul li a:after {
+  margin-left: 5px;
+  content: '\25BA';
+}
+
+.sidr-class-primary_nav_wrap ul li ul li a:after {
+  margin-left: 5px;
+  content: '\25BC';
+}
+
+.sidr-class-primary_nav_wrap li > ul li > ul a:after {
+  margin-left: 5px;
+  content: '\25BC';
+}
+
+/**end menu**/
 
 .slide {
   background: url("../images/slide.jpg") no-repeat scroll center top;
@@ -212,6 +340,7 @@ h4, h5, h6 {
 }
 
 .cermet {
+  @include clearfix();
   h1 {
     font-size: 46px;
   }
@@ -229,6 +358,10 @@ h4, h5, h6 {
         @include span(3);
         @include push(1);
         margin-right: 0;
+        img {
+          width: 100%;
+          max-width: 245px;
+        }
       }
     }
 
@@ -277,6 +410,10 @@ h4, h5, h6 {
     @include clearfix();
     .image {
       @include span(4);
+      img {
+        width: 100%;
+        max-width: 300px;
+      }
     }
     .text {
       @include span(8);
@@ -300,22 +437,21 @@ h4, h5, h6 {
 
     .cermet-left {
       @include span(6);
-      margin-top: 20px;
+      margin-top: 12px;
       ul {
         margin-left: 0;
         li {
-          background: url("../images/knopka21.png") no-repeat;
+          @include linear-gradient-b(to bottom, #00C2D8 0%, #0096BB 100%);
           color: #ffffff;
-          font-size: 18px;
+          font-size: 17px;
           font-weight: bold;
-          height: 62px;
           list-style: outside none none;
           line-height: 1.1;
-          margin-top: 10px;
-          padding-left: 13px;
-          padding-top: 10px;
+          margin-top: 20px;
           text-shadow: 1px 1px 1px #000000;
-          max-width: 366px;
+          border-radius: 6px;
+          padding: 10px;
+          width: 100%;
         }
       }
     }
@@ -345,7 +481,6 @@ h4, h5, h6 {
       li {
         background: url("../images/confirm.png") no-repeat scroll left center;
         font-size: 16px;
-        height: 50px;
         list-style: outside none none;
         margin-top: 18px;
         padding-left: 56px;
@@ -372,9 +507,13 @@ h4, h5, h6 {
 }
 
 .prosthesis-examples {
-  background: url(../images/block_bg_2.jpg) no-repeat;
-  min-height: 383px;
+  @include linear-gradient-b(to right, #B6E2EB 0%, #CFEDEF 100%);
+
   width: 100%;
+  .prosthesis-examples-inside {
+    padding-top: 50px;
+    padding-bottom: 20px;
+  }
 }
 
 .methods-prosthesis {
@@ -417,7 +556,7 @@ h4, h5, h6 {
 }
 
 .appointments {
-  background: url(../images/block_bg_3.jpg) no-repeat scroll 0 0;
+  @include linear-gradient-b(to right, rgba(183, 228, 234, 1) 0%, rgba(208, 236, 237, 1) 100%);
   margin: 0 auto;
   width: 100%;
   position: relative;
@@ -495,6 +634,7 @@ h4, h5, h6 {
 }
 
 .clinic-services {
+  border-top: 1px dashed #e6e6e6;
   h2 {
     background: url(../images/akcia.png) no-repeat scroll left center;
     font-size: 30px;
@@ -544,6 +684,7 @@ h4, h5, h6 {
         padding-bottom: 0;
         img {
           border-radius: 6px;
+          width: 100%;
         }
       }
       &-description {
@@ -555,7 +696,6 @@ h4, h5, h6 {
       }
     }
     .discount-service {
-      @include span(4);
       margin-right: 0;
       .discount-service-inside {
         max-width: 232px;
@@ -594,12 +734,12 @@ h4, h5, h6 {
 }
 
 .contact-info {
-  background: url(../images/block_bg_4.jpg) no-repeat scroll center top;
+  @include linear-gradient-b(to right, rgba(50, 161, 206, 1) 0%, rgba(137, 227, 236, 1) 100%);
   padding: 20px 0;
   .contact-info-title {
     color: #00adca;
     font-size: 18px;
-    padding-top: 11px;
+    padding-top: 15px;
     text-align: center;
   }
   .contact-info-inside {
@@ -607,7 +747,9 @@ h4, h5, h6 {
     background: #fdfdfd no-repeat;
     border-radius: 6px;
     .contact-info-blocks {
-      padding: 0 20px;
+      @include clearfix();
+      padding: 20px 20px 15px;
+
       .phone {
         @include span(4);
         .phone-text {
@@ -628,7 +770,7 @@ h4, h5, h6 {
 
       }
       .call {
-        @include span(4);
+        @include span(5);
         .call-text {
 
         }
@@ -650,10 +792,12 @@ h4, h5, h6 {
         }
       }
       .receive-letter {
-        @include span(4);
+        @include span(3);
         margin-right: 0;
+        margin-top: -12px;
         .receive-text {
-
+          text-align: center;
+          line-height: 1.1;
         }
         .receive-button {
           background: url(../images/knopka5.png) no-repeat scroll center center;
@@ -790,6 +934,8 @@ SLIDER
   display: block;
   width: 100%;
   height: auto;
+  max-width: 460px;
+  margin: 0 auto;
 }
 
 .img-price {
@@ -820,7 +966,6 @@ SLIDER
       padding: 15px 25px;
       background: #6d9aee;
       text-transform: uppercase;
-      font-family: 'Roboto Black';
       color: #fff;
       border: 1px solid #6d9aee;
 
@@ -887,7 +1032,7 @@ SLIDER
       font-size: 14px;
       font-weight: bold;
       text-decoration: none;
-      transition: all 0.4s ease 0s
+      transition: all 0.4s ease 0s;
     }
   }
 }
@@ -907,60 +1052,99 @@ SLIDER
 /*adults-dentistry page start*/
 
 .adults-dentistry {
-  h1{
+  h1 {
     font-size: 48px;
   }
-  .discount-button{
+  .discount-button {
     text-align: center;
   }
   .adults-dentistry-offers {
     @include clearfix();
+    padding: 37px 0;
     .offer {
-      @include span(3);
+      @include gallery(3);
+      border: 1px solid #ededed;
+      border-radius: 6px;
+      margin-bottom: 8px;
       &:nth-child(4n) {
         margin-right: 0;
       }
-      .offer-description{
+      .offer-description {
         text-align: center;
-
+        .offer-title {
+          font-size: 18px;
+          padding: 15px 0 5px;
+          &:after {
+            border-bottom: 3px solid #69dce9;
+            content: '';
+            width: 150px;
+            display: block;
+            margin: 0 auto;
+            margin-top: 10px;
+          }
+        }
       }
     }
   }
 }
 
-.show-offer{
+.show-offer {
   position: relative;
-  &:before{
-    content: ' ▶';
+  a {
+    color: #69dce9;
   }
-  &:hover:before{
-    content:'\25bc'
+  &:before {
+    content: '\f105';
+    color: #69dce9;
+    font-family: FontAwesome;
+    font-weight: bold;
+    font-size: larger;
+    padding: 7px;
+
+  }
+  &:hover:before {
+    content: '\f107';
+    font-family: FontAwesome;
+    font-size: larger;
+    padding: 7px;
   }
 }
-.list-to-show{
-  margin-left: 0;
+
+.list-to-show {
   text-align: left;
   left: 0;
   display: none;
   position: absolute;
-  top: 20px;
+  top: 21px;
   z-index: 1;
   background-color: $white;
   padding: 20px;
+  padding-bottom: 0;
+  width: 100%;
+  ul {
+    margin-left: 0;
+    li {
+      a {
+        color: #69dce9;
+      }
+    }
+  }
+  .hide:after {
+    content: '✖';
+    font-size: 17px;
+    position: absolute;
+    top: 0;
+    right: 15px;
+    color: #69dce9;
+  }
 }
-ul.list-to-show li{
+
+.list-to-show li {
   float: none;
   width: 100%;
   list-style: none;
   text-decoration: underline;
 }
-.list-to-show a:hover{
-}
-
-//.show-offer:hover .list-to-show{
-//  visibility: visible;
-//  opacity: 1;
-//}
 
 .hover-image-wrap {
   position: relative;
@@ -1000,22 +1184,244 @@ ul.list-to-show li{
   opacity: 1;
 }
 
+.save-with-us {
+  h2 {
+    font-size: 30px;
+  }
+  .save-offer {
+    @include clearfix();
+    padding: 35px 0 60px;
+
+    .save-offer-inside {
+      @include linear-gradient-b(to bottom, rgba(0, 195, 218, 1) 0%, rgba(0, 151, 187, 1) 100%);
+      width: 18.4%;
+      float: left;
+      margin-right: 1.9607843137%;
+      text-align: center;
+      color: $white;
+      padding: 15px;
+      border-radius: 6px;
+      -webkit-box-shadow: 0 8px 6px -6px black;
+      -moz-box-shadow: 0 8px 6px -6px black;
+      box-shadow: 0 8px 6px -6px black;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.about {
+  border-top: 1px dashed #e6e6e6;
+  min-height: 275px;
+}
+
 /*adults-dentistry page end*/
 
-@media screen and (max-width: 1230px) {
+/*Start Responsive*/
+@media only screen and (max-width: 1200px) {
+
+}
+
+@media only screen and (max-width: 1080px) {
   .wrapper {
     padding-right: 30px;
     padding-left: 30px;
   }
-}
-
-@media screen and (max-width: 480px) {
-  img.method-image {
+  .main-header .primary_nav_wrap {
+    display: none;
+  }
+  .footer-menu .header-nav {
+    display: none;
+  }
+  .header-nav #mobile-header {
     display: block;
-    width: 100%;
-    float: none;
-    margin: 0 auto 20px !important;
+    float: right;
+  }
+  .sidr ul li ul {
+    display: none;
+
   }
 }
 
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+  .popular-cermet .cermet-part {
+    @include span(12);
+  }
+  .image-item {
+    width: 100%;
+  }
+  .item-content {
+    width: 100%;
+  }
+  .adults-dentistry .adults-dentistry-offers .offer {
+    @include gallery(4);
+  }
+  .clinic-services .clinic-services-inside {
+    margin: 0;
+    width: 100%;
+  }
+  .contact-info .contact-info-inside .contact-info-blocks .phone {
+    @include span(6);
+  }
+  .contact-info .contact-info-inside .contact-info-blocks .call {
+    @include span(6);
+    margin-right: 0;
+  }
+  .contact-info .contact-info-inside .contact-info-blocks .receive-letter {
+    @include span(12);
+    margin-top: 30px;
+  }
+}
 
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+  .cermet-advantages .description .image {
+    @include span(12);
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+  .cermet-advantages .description .text {
+    @include span(12);
+  }
+  .appointments .appointments-text {
+    @include span(12);
+    text-align: center;
+    margin-top: 10px;
+  }
+  .appointments .appointments-form-input {
+    @include span(12);
+    text-align: center;
+    margin-top: 15px;
+  }
+  .methods-prosthesis .first-method .method-description img,
+  .methods-prosthesis .last-method .method-description img,
+  .advantages-clinic .advantages-description img {
+    display: block;
+    margin: 0 auto;
+    float: none;
+  }
+  .cermet .description-inside .text {
+    @include span(12);
+  }
+  .cermet .description-inside .image {
+    display: none;
+  }
+
+}
+
+@media only screen and (max-width: 720px) {
+  .clinic-services, .contact-info {
+    display: none;
+  }
+  .main-header .header-logo {
+    @include span(6);
+  }
+  .main-header .header-address {
+    display: none;
+  }
+  .main-header .header-phone {
+    @include span(6);
+    float: right;
+    margin-right: 0;
+  }
+
+}
+
+@media only screen and (max-width: 640px) {
+  .prosthesis-types .type-list {
+    margin-bottom: 20px;
+    ul {
+      margin: 0;
+    }
+  }
+  .popular-cermet .cermet-part {
+    padding: 0;
+  }
+  .popular-cermet .cermet-part .cermet-left {
+    @include span(12);
+    text-align: center;
+  }
+  .popular-cermet .cermet-part .cermet-right {
+    @include span(12);
+    img {
+      width: 100%;
+    }
+  }
+  .cermet .description {
+    padding: 10px;
+  }
+  .adults-dentistry .adults-dentistry-offers .offer {
+    @include gallery(6);
+  }
+  .save-with-us .save-offer .save-offer-inside {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .methods-prosthesis .first-method .method-description img,
+  .methods-prosthesis .last-method .method-description img,
+  .advantages-clinic .advantages-description img {
+    width: 100%;
+  }
+  .footer-copyright .copyright-left-side {
+    float: none;
+    text-align: center;
+  }
+  .footer-copyright .copyright-right-side {
+    float: none;
+    text-align: center;
+  }
+  .footer-copyright {
+    padding-top: 15px;
+    padding-bottom: 20px;
+  }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+  .main-header .header-logo {
+    @include span(12);
+    img {
+      margin: 0 auto;
+    }
+  }
+  .main-header .header-phone {
+    @include span(12);
+  }
+  .main-header .header-phone .phone-link {
+    display: none;
+  }
+  .main-header .header-phone .phone-number {
+    float: none;
+    margin: 0 auto;
+  }
+  .cermet-advantages .advantages-list-inside ul {
+    margin: 0 0 1.5em 1em;
+  }
+  .adults-dentistry .adults-dentistry-offers .offer {
+    @include gallery(12);
+    float: none;
+  }
+  .wrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .header-nav #mobile-header {
+    padding-right: 20px;
+  }
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width: 320px) {
+  .wrapper {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .header-nav #mobile-header {
+    padding-right: 10px;
+  }
+}

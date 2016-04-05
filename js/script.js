@@ -1,13 +1,32 @@
-$(document).ready(function () {
 
-    $(".show").click(function() {
-        event.preventDefault();
-        var $parent = $(this).parent();
-        var $slideElm = $parent.find(".list-to-show");
-        $slideElm.fadeToggle(200)
+$(document).ready(function () {
+    $('#responsive-menu-button').sidr({
+        name: 'sidr-main',
+        side: 'right',
+        source: '#navigation'
     });
 
+    
+    $(".sidr-class-primary_nav_wrap ul li a").click(function() {
+        $(this).next('ul').slideToggle('fast');
+    });
 
+    $('header, main, footer').click(function() {
+        event.preventDefault();
+        $.sidr('close', 'sidr-main');
+    });
+    
+    $('.show').on("click", function () {
+        event.preventDefault();
+        $(this).parent().find(".list-to-show").fadeToggle(200);
+    });
+
+    $('.hide').on("click", function () {
+        event.preventDefault();
+        $(this).parents(".list-to-show").fadeToggle(200);
+    });
+    
+    
     $("#owl-demo").owlCarousel({
 
         navigation: true,
@@ -64,7 +83,6 @@ $(document).ready(function () {
         pagination: true,
         paginationNumbers: true,
         navigationText: ["<img src='images/left.png' class='arrow-left-bottom'>", "<img src='images/right.png' class='arrow-right-bottom'>"],
-        pagination: true
 
         // "singleItem:true" is a shortcut for:
         // items : 1,
@@ -96,3 +114,4 @@ $(document).ready(function () {
 
 
 });
+
