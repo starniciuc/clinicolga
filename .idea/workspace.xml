@@ -1,28 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="111513d9-b7c4-4009-aced-af3531a36c15" name="Default" comment="Finish to implement the website">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/check-round.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/check.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/description_1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/description_2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/description_3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/person1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/person2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/person3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/person4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/women_img.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/custombox.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/custombox.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/prosthetics.html" />
+    <list default="true" id="111513d9-b7c4-4009-aced-af3531a36c15" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/adults-dentistry.html" afterPath="$PROJECT_DIR$/adults-dentistry.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/owl.carousel.css" afterPath="$PROJECT_DIR$/css/owl.carousel.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/styles.css" afterPath="$PROJECT_DIR$/css/styles.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/styles.css.map" afterPath="$PROJECT_DIR$/css/styles.css.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/script.js" afterPath="$PROJECT_DIR$/js/script.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/styles.scss" afterPath="$PROJECT_DIR$/scss/styles.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/prosthetics.html" afterPath="$PROJECT_DIR$/prosthetics.html" />
     </list>
     <ignored path="olgaclinic.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -43,11 +26,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="31" column="84" selection-start-line="31" selection-start-column="49" selection-end-line="31" selection-end-column="84" />
+            <state relative-caret-position="425">
+              <caret line="454" column="87" selection-start-line="454" selection-start-column="87" selection-end-line="454" selection-end-column="87" />
               <folding>
                 <element signature="n#ul#0;n#li#3;n#ul#0;n#nav#0;n#div#0;n#div#0;n#div#1;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#ul#0;n#li#4;n#ul#0;n#nav#0;n#div#0;n#div#0;n#div#1;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -60,33 +43,13 @@
       <file leaf-file-name="adults-dentistry.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/adults-dentistry.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+            <state relative-caret-position="540">
+              <caret line="539" column="87" selection-start-line="539" selection-start-column="87" selection-end-line="539" selection-end-column="87" />
               <folding>
                 <element signature="n#ul#0;n#li#3;n#ul#0;n#nav#0;n#div#0;n#div#0;n#div#1;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#ul#0;n#li#4;n#ul#0;n#nav#0;n#div#0;n#div#0;n#div#1;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="styles.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scss/styles.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="87">
-              <caret line="751" column="33" selection-start-line="751" selection-start-column="33" selection-end-line="751" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="custombox.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/custombox.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="94" column="34" selection-start-line="94" selection-start-column="34" selection-end-line="94" selection-end-column="34" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -94,43 +57,13 @@
       <file leaf-file-name="prosthetics.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/prosthetics.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="87">
-              <caret line="157" column="64" selection-start-line="157" selection-start-column="64" selection-end-line="157" selection-end-column="64" />
+            <state relative-caret-position="393">
+              <caret line="621" column="51" selection-start-line="621" selection-start-column="51" selection-end-line="621" selection-end-column="51" />
               <folding>
                 <element signature="n#ul#0;n#li#3;n#ul#0;n#nav#0;n#div#0;n#div#0;n#div#1;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#ul#0;n#li#4;n#ul#0;n#nav#0;n#div#0;n#div#0;n#div#1;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="styles.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/styles.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="62" column="2" selection-start-line="62" selection-start-column="2" selection-end-line="62" selection-end-column="2" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="custombox.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/js/custombox.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="760" column="27" selection-start-line="760" selection-start-column="27" selection-end-line="760" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="script.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/script.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="26" column="7" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -161,8 +94,8 @@
         <option value="$PROJECT_DIR$/js/script.js" />
         <option value="$PROJECT_DIR$/scss/styles.scss" />
         <option value="$PROJECT_DIR$/prosthetics.html" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/adults-dentistry.html" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -430,7 +363,7 @@
       <workItem from="1459784747823" duration="12396000" />
       <workItem from="1459838294937" duration="26722000" />
       <workItem from="1459867328425" duration="108000" />
-      <workItem from="1459923365371" duration="20784000" />
+      <workItem from="1459923365371" duration="21027000" />
     </task>
     <task id="LOCAL-00001" summary="Add menu to home page and create second page">
       <created>1459851672825</created>
@@ -439,11 +372,18 @@
       <option name="project" value="LOCAL" />
       <updated>1459851672825</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Finish to implement the website">
+      <created>1459944625598</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1459944625598</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="121136000" />
+    <option name="totallyTimeSpent" value="121379000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -460,7 +400,7 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15803383" sideWeight="0.4954955" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32882884" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5961755" sideWeight="0.49572194" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5961755" sideWeight="0.49572194" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Grunt " active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928064" sideWeight="0.50208336" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15856236" sideWeight="0.5045045" order="2" side_tool="true" content_ui="tabs" />
@@ -766,30 +706,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="31" column="84" selection-start-line="31" selection-start-column="49" selection-end-line="31" selection-end-column="84" />
-          <folding>
-            <element signature="n#ul#0;n#li#3;n#ul#0;n#nav#0;n#div#0;n#div#0;n#div#1;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#ul#0;n#li#4;n#ul#0;n#nav#0;n#div#0;n#div#0;n#div#1;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/adults-dentistry.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
-          <folding>
-            <element signature="n#ul#0;n#li#3;n#ul#0;n#nav#0;n#div#0;n#div#0;n#div#1;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#ul#0;n#li#4;n#ul#0;n#nav#0;n#div#0;n#div#0;n#div#1;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/owl.carousel.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="373">
@@ -806,30 +722,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scss/styles.scss">
+    <entry file="file://$PROJECT_DIR$/js/custombox.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="751" column="33" selection-start-line="751" selection-start-column="33" selection-end-line="751" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/custombox.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="94" column="34" selection-start-line="94" selection-start-column="34" selection-end-line="94" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/prosthetics.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="157" column="64" selection-start-line="157" selection-start-column="64" selection-end-line="157" selection-end-column="64" />
+        <state relative-caret-position="459">
+          <caret line="755" column="36" selection-start-line="755" selection-start-column="36" selection-end-line="755" selection-end-column="36" />
           <folding>
-            <element signature="n#ul#0;n#li#3;n#ul#0;n#nav#0;n#div#0;n#div#0;n#div#1;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#ul#0;n#li#4;n#ul#0;n#nav#0;n#div#0;n#div#0;n#div#1;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#32661#32794#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -842,11 +740,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/custombox.js">
+    <entry file="file://$PROJECT_DIR$/css/custombox.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
-          <caret line="760" column="27" selection-start-line="760" selection-start-column="27" selection-end-line="760" selection-end-column="27" />
+          <caret line="94" column="34" selection-start-line="94" selection-start-column="34" selection-end-line="94" selection-end-column="34" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scss/styles.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="751" column="33" selection-start-line="751" selection-start-column="33" selection-end-line="751" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prosthetics.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="621" column="51" selection-start-line="621" selection-start-column="51" selection-end-line="621" selection-end-column="51" />
+          <folding>
+            <element signature="n#ul#0;n#li#3;n#ul#0;n#nav#0;n#div#0;n#div#0;n#div#1;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#ul#0;n#li#4;n#ul#0;n#nav#0;n#div#0;n#div#0;n#div#1;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/adults-dentistry.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="539" column="87" selection-start-line="539" selection-start-column="87" selection-end-line="539" selection-end-column="87" />
+          <folding>
+            <element signature="n#ul#0;n#li#3;n#ul#0;n#nav#0;n#div#0;n#div#0;n#div#1;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#ul#0;n#li#4;n#ul#0;n#nav#0;n#div#0;n#div#0;n#div#1;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="454" column="87" selection-start-line="454" selection-start-column="87" selection-end-line="454" selection-end-column="87" />
+          <folding>
+            <element signature="n#ul#0;n#li#3;n#ul#0;n#nav#0;n#div#0;n#div#0;n#div#1;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#ul#0;n#li#4;n#ul#0;n#nav#0;n#div#0;n#div#0;n#div#1;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
