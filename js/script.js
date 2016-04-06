@@ -1,4 +1,3 @@
-
 $(document).ready(function () {
     $('#responsive-menu-button').sidr({
         name: 'sidr-main',
@@ -6,16 +5,17 @@ $(document).ready(function () {
         source: '#navigation'
     });
 
-    
-    $(".sidr-class-primary_nav_wrap ul li a").click(function() {
-        $(this).next('ul').slideToggle('fast');
+
+    $(".sidr-class-primary_nav_wrap ul li a").click(function () {
+        event.preventDefault();
+        $(this).next('ul').slideToggle('slow');
     });
 
-    $('header, main, footer').click(function() {
-        event.preventDefault();
+    $('header, main, footer').click(function () {
+
         $.sidr('close', 'sidr-main');
     });
-    
+
     $('.show').on("click", function () {
         event.preventDefault();
         $(this).parent().find(".list-to-show").fadeToggle(200);
@@ -25,8 +25,55 @@ $(document).ready(function () {
         event.preventDefault();
         $(this).parents(".list-to-show").fadeToggle(200);
     });
-    
-    
+
+
+    $('.reply').on('click', function( e ) {
+        Custombox.open({
+            target: '#modal',
+            effect: 'fadein'
+        });
+        e.preventDefault();
+    });
+
+
+    $("#owl-demo-prosthetics-v1").owlCarousel({
+
+        navigation: true,
+        slideSpeed: 300,
+        paginationSpeed: 400,
+        singleItem: true,
+        pagination: true,
+        paginationNumbers: true,
+        navigationText: ["<img src='images/left.png' class='arrow-left-bottom'>", "<img src='images/right.png' class='arrow-right-bottom'>"],
+
+        // "singleItem:true" is a shortcut for:
+        // items : 1,
+        // itemsDesktop : false,
+        // itemsDesktopSmall : false,
+        // itemsTablet: false,
+        // itemsMobile : false
+    });
+
+
+    $("#owl-demo-prosthetics-v2").owlCarousel({
+
+        navigation: true,
+        slideSpeed: 300,
+        paginationSpeed: 400,
+        singleItem: true,
+        pagination: false,
+        paginationNumbers: false,
+        navigationText: ["<img src='images/left.png' class='arrow-left-bottom'>", "<img src='images/right.png' class='arrow-right-bottom'>"],
+
+        // "singleItem:true" is a shortcut for:
+        // items : 1,
+        // itemsDesktop : false,
+        // itemsDesktopSmall : false,
+        // itemsTablet: false,
+        // itemsMobile : false
+    });
+
+
     $("#owl-demo").owlCarousel({
 
         navigation: true,
@@ -91,17 +138,6 @@ $(document).ready(function () {
         // itemsTablet: false,
         // itemsMobile : false
     });
-    /*
-     var totalItems = $('.owl-item').length;
-     var currentIndex = $('.active').index() + 1;
-     $('.num').html(''+currentIndex+'/'+totalItems+'');
-
-
-     $('#owl-demo-bottom').bind('slid', function() {
-     currentIndex = $('#owl-demo-bottom > .active').index() + 1;
-     $('.num').html(''+currentIndex+'/'+totalItems+'');
-     });
-     */
 
 
     $('.bottom-arrow-right').click(function () {

@@ -658,20 +658,66 @@ body {
     display: block;
     clear: both; }
 
+.button-gold {
+  background-image: -o-linear-gradient(to bottom, #ffde4e 0%, #ffc14f 100%);
+  background-image: -moz-linear-gradient(to bottom, #ffde4e 0%, #ffc14f 100%);
+  background-image: -webkit-linear-gradient(to bottom, #ffde4e 0%, #ffc14f 100%);
+  background-image: linear-gradient(to bottom, #ffde4e 0%, #ffc14f 100%);
+  border-bottom: 1px solid #e5ad5e;
+  border-radius: 5px;
+  color: #3e3e3e;
+  font-weight: bold;
+  padding: 15px 10px;
+  font-size: 1.6rem;
+  text-align: center;
+  line-height: 1;
+  transition: all 0.4s ease 0s; }
+
+.button-aqua {
+  background-color: #00c3d9;
+  color: #ffffff;
+  padding: 15px 10px;
+  text-align: center;
+  transition: all 0.4s ease 0s;
+  line-height: 30px;
+  border-radius: 5px; }
+
+.button-aqua-bold {
+  background-image: -o-linear-gradient(to bottom, #00c3da 0%, #0098bb 100%);
+  background-image: -moz-linear-gradient(to bottom, #00c3da 0%, #0098bb 100%);
+  background-image: -webkit-linear-gradient(to bottom, #00c3da 0%, #0098bb 100%);
+  background-image: linear-gradient(to bottom, #00c3da 0%, #0098bb 100%);
+  color: #ffffff;
+  padding: 15px 10px;
+  text-align: center;
+  transition: all 0.4s ease 0s;
+  line-height: 30px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 16px; }
+
+.button-aqua-dots {
+  border-bottom: 2px dotted #00c3d9;
+  color: #00c3d9;
+  font-weight: bold;
+  text-align: center;
+  transition: all 0.4s ease 0s; }
+
 p {
   margin-bottom: 18px;
-  color: #3c3c3c;
+  color: #000;
   font-size: 14px;
-  line-height: 25px; }
+  line-height: 1.2; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  color: #00c3d9; }
 
 img {
   display: block; }
 
 h1, h2, h3, h4, h5, h6 {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   text-align: center;
   font-size: 32px;
   line-height: 30px;
@@ -711,6 +757,8 @@ h4, h5, h6 {
     margin-top: 20px;
     text-transform: uppercase;
     text-align: center; }
+    .main-header .header-address .location {
+      margin-top: 10px; }
     .main-header .header-address .location:before {
       content: " ";
       background: url("../images/navigation.png") no-repeat;
@@ -718,7 +766,7 @@ h4, h5, h6 {
       width: 25px;
       height: 35px;
       float: left;
-      margin-left: 15px; }
+      margin-top: -7px; }
   .main-header .header-phone {
     width: 32.0261437908%;
     float: left;
@@ -788,7 +836,7 @@ h4, h5, h6 {
     display: block;
     text-decoration: none;
     color: #000;
-    padding: 0 14px; }
+    padding: 0; }
   .header-nav .primary_nav_wrap ul li {
     position: relative;
     display: inline-block;
@@ -800,7 +848,10 @@ h4, h5, h6 {
     padding: 0 2px;
     border-radius: 7px; }
   .header-nav .primary_nav_wrap ul li:hover {
-    background: url(../images/knopka.png) repeat-x center; }
+    background-image: -o-linear-gradient(to right, #66b5ce 0%, #6cbfd5 100%);
+    background-image: -moz-linear-gradient(to right, #66b5ce 0%, #6cbfd5 100%);
+    background-image: -webkit-linear-gradient(to right, #66b5ce 0%, #6cbfd5 100%);
+    background-image: linear-gradient(to right, #66b5ce 0%, #6cbfd5 100%); }
   .header-nav .primary_nav_wrap ul li a:hover {
     color: #fff; }
   .header-nav .primary_nav_wrap ul ul {
@@ -861,63 +912,72 @@ h4, h5, h6 {
   margin: 0 auto;
   width: 100%; }
 
-.cermet:before, .cermet:after {
+.brad-cramps:before, .brad-cramps:after {
   content: "";
   display: table; }
 
-.cermet:after {
+.brad-cramps:after {
   clear: both; }
 
-.cermet h1, .cermet h2, .cermet h3, .cermet h4, .cermet h5, .cermet h6 {
-  font-size: 46px; }
+.brad-cramps .brad-cramps-inside {
+  background-color: #fff;
+  margin: -20px auto 0;
+  padding: 0 10px;
+  max-width: 94%;
+  color: #00c3d9; }
 
-.cermet .description {
-  border: 1px solid #00c3d8;
-  border-radius: 7px;
-  margin: 0 auto;
-  padding: 15px 30px; }
-  .cermet .description-inside:before, .cermet .description-inside:after {
+.cermet {
+  padding: 30px 0; }
+  .cermet:before, .cermet:after {
     content: "";
     display: table; }
-  .cermet .description-inside:after {
+  .cermet:after {
     clear: both; }
-  .cermet .description-inside .text {
-    width: 66.0130718954%;
-    float: left;
-    margin-right: 1.9607843137%; }
-  .cermet .description-inside .image {
-    width: 23.5294117647%;
-    float: left;
-    margin-right: 1.9607843137%;
-    margin-left: 8.4967320261%;
-    margin-right: 0; }
-    .cermet .description-inside .image img {
-      width: 100%;
-      max-width: 245px; }
-  .cermet .description .button {
-    padding: 12px;
-    font-size: 16px;
-    font-weight: bold;
+  .cermet h1, .cermet h2, .cermet h3, .cermet h4, .cermet h5, .cermet h6 {
+    font-size: 46px;
+    font-weight: bold; }
+  .cermet .description {
+    border: 1px solid #00c3d8;
+    border-radius: 7px;
     margin: 0 auto;
-    text-align: center;
-    width: 196px;
-    background-color: red; }
-    .cermet .description .button:before, .cermet .description .button:after {
+    padding: 15px 30px;
+    padding-bottom: 5px; }
+    .cermet .description-inside:before, .cermet .description-inside:after {
       content: "";
       display: table; }
-    .cermet .description .button:after {
+    .cermet .description-inside:after {
       clear: both; }
-    .cermet .description .button a {
-      color: #ffffff; }
+    .cermet .description-inside .text {
+      width: 66.0130718954%;
+      float: left;
+      margin-right: 1.9607843137%; }
+    .cermet .description-inside .image {
+      width: 23.5294117647%;
+      float: left;
+      margin-right: 1.9607843137%;
+      margin-left: 8.4967320261%;
+      margin-right: 0; }
+      .cermet .description-inside .image img {
+        width: 100%;
+        max-width: 245px; }
+    .cermet .description .button {
+      text-align: center;
+      margin-bottom: 20px;
+      margin-top: 10px; }
 
 .cermet-advantages {
   border-top: 1px dashed #e6e6e6;
+  border-bottom: 1px dashed #e6e6e6;
   margin: 20px 0;
   width: 100%; }
   .cermet-advantages h2, .cermet-advantages h3, .cermet-advantages h4, .cermet-advantages h5, .cermet-advantages h6 {
-    font-size: 36px; }
+    font-size: 36px;
+    margin-top: 24px; }
   .cermet-advantages .advantages-list {
-    background-color: #0b97c4;
+    background-image: -o-linear-gradient(to right, #b7e4ea 0%, #d0eced 100%);
+    background-image: -moz-linear-gradient(to right, #b7e4ea 0%, #d0eced 100%);
+    background-image: -webkit-linear-gradient(to right, #b7e4ea 0%, #d0eced 100%);
+    background-image: linear-gradient(to right, #b7e4ea 0%, #d0eced 100%);
     padding: 10px 0; }
     .cermet-advantages .advantages-list-inside {
       margin: 0 auto;
@@ -925,7 +985,8 @@ h4, h5, h6 {
       font-size: 14px;
       line-height: 26px; }
       .cermet-advantages .advantages-list-inside ul {
-        color: #ffffff; }
+        color: #ffffff;
+        margin-bottom: 0; }
         .cermet-advantages .advantages-list-inside ul li span {
           color: #000000; }
   .cermet-advantages .description:before, .cermet-advantages .description:after {
@@ -944,19 +1005,23 @@ h4, h5, h6 {
     width: 66.0130718954%;
     float: left;
     margin-right: 1.9607843137%;
-    margin-right: 0; }
+    margin-right: 0;
+    text-align: justify; }
   .cermet-advantages .description .button {
-    text-align: center; }
+    text-align: center;
+    margin-top: 100px; }
 
 .popular-cermet h2, .popular-cermet h3, .popular-cermet h4, .popular-cermet h5, .popular-cermet h6 {
-  font-size: 30px; }
+  font-size: 30px;
+  padding-top: 15px; }
 
 .popular-cermet .cermet-part {
   width: 66.0130718954%;
   float: left;
   margin-right: 1.9607843137%;
   margin-left: 16.9934640523%;
-  padding: 50px 0; }
+  padding-top: 40px;
+  padding-bottom: 80px; }
   .popular-cermet .cermet-part:before, .popular-cermet .cermet-part:after {
     content: "";
     display: table; }
@@ -1023,6 +1088,8 @@ h4, h5, h6 {
     max-width: 522px; }
     .prosthesis-types .prosthesis-motto span {
       margin-left: 15px; }
+    .prosthesis-types .prosthesis-motto .button {
+      margin: 40px 0; }
 
 .prosthesis-examples {
   background-image: -o-linear-gradient(to right, #B6E2EB 0%, #CFEDEF 100%);
@@ -1031,13 +1098,25 @@ h4, h5, h6 {
   background-image: linear-gradient(to right, #B6E2EB 0%, #CFEDEF 100%);
   width: 100%; }
   .prosthesis-examples .prosthesis-examples-inside {
-    padding-top: 50px;
-    padding-bottom: 20px; }
+    padding: 50px 0; }
+  .prosthesis-examples #owl-demo-bottom {
+    text-align: justify; }
+    .prosthesis-examples #owl-demo-bottom h2, .prosthesis-examples #owl-demo-bottom h3, .prosthesis-examples #owl-demo-bottom h4, .prosthesis-examples #owl-demo-bottom h5, .prosthesis-examples #owl-demo-bottom h6 {
+      text-align: left; }
+  .prosthesis-examples #owl-demo-prosthetics-v1 .item-content h2, .prosthesis-examples #owl-demo-prosthetics-v1 .item-content h3, .prosthesis-examples #owl-demo-prosthetics-v1 .item-content h4, .prosthesis-examples #owl-demo-prosthetics-v1 .item-content h5, .prosthesis-examples #owl-demo-prosthetics-v1 .item-content h6 {
+    text-align: left;
+    margin-bottom: 15px; }
+  .prosthesis-examples #owl-demo-prosthetics-v1 .image-item {
+    margin-right: 0; }
+  .prosthesis-examples #owl-demo-prosthetics-v1 .owl-controls {
+    left: 13px; }
 
 .methods-prosthesis {
-  padding: 30px 0; }
+  padding: 30px 0;
+  padding-bottom: 50px; }
   .methods-prosthesis h2, .methods-prosthesis h3, .methods-prosthesis h4, .methods-prosthesis h5, .methods-prosthesis h6 {
-    font-size: 30px; }
+    font-size: 30px;
+    margin-top: 15px; }
   .methods-prosthesis .first-method .method-description p span {
     color: #0095b9;
     font-weight: bold;
@@ -1093,18 +1172,23 @@ h4, h5, h6 {
       height: 44px;
       line-height: 44px;
       text-align: center;
-      width: 254px; }
+      width: 254px;
+      float: left;
+      margin-right: 20px; }
     .appointments .appointments-form-input .button-input {
-      background: url(../images/knopka11.png) repeat scroll 0 0;
-      cursor: pointer;
-      border: medium none;
-      color: #3d3d3d;
-      font-size: 16px;
+      background-image: linear-gradient(to bottom, #ffde4e 0%, #ffc14f 100%);
+      display: block;
+      width: 31%;
+      max-width: 254px;
+      border-radius: 5px;
+      color: #3e3e3e;
       font-weight: bold;
-      height: 49px;
-      margin-left: 14px;
-      margin-top: 0;
-      width: 117px; }
+      padding: 15px 10px;
+      font-size: 1.6rem;
+      text-align: center;
+      line-height: 1;
+      transition: all 0.4s ease 0s;
+      border: none; }
 
 .advantages-clinic {
   padding: 30px 0; }
@@ -1115,26 +1199,29 @@ h4, h5, h6 {
     margin: 0 auto;
     max-width: 375px;
     padding-left: 40px; }
-  .advantages-clinic .advantages-description span {
-    color: #0095b9;
-    font-weight: bold;
-    text-transform: uppercase; }
-  .advantages-clinic .advantages-description img {
-    margin: 0 0 10px 10px;
-    float: right;
-    vertical-align: top; }
+  .advantages-clinic .advantages-description {
+    padding-top: 40px; }
+    .advantages-clinic .advantages-description span {
+      color: #0095b9;
+      font-weight: bold;
+      text-transform: uppercase; }
+    .advantages-clinic .advantages-description img {
+      margin: 0 0 10px 10px;
+      float: right;
+      vertical-align: top; }
 
 .clinic-services {
-  border-top: 1px dashed #e6e6e6; }
+  border-top: 1px dashed #e6e6e6;
+  padding-top: 30px; }
   .clinic-services h2, .clinic-services h3, .clinic-services h4, .clinic-services h5, .clinic-services h6 {
     background: url(../images/akcia.png) no-repeat scroll left center;
     font-size: 30px;
     font-weight: normal;
     height: 40px;
     line-height: 40px;
-    margin: 31px auto 0;
-    padding-left: 44px;
-    max-width: 631px; }
+    padding-left: 20px;
+    max-width: 580px;
+    margin: 0 auto; }
   .clinic-services .all-shares-button {
     height: 43px;
     left: 55%;
@@ -1195,13 +1282,14 @@ h4, h5, h6 {
         height: 286px;
         border-radius: 6px; }
       .clinic-services .clinic-services-inside .discount-service .discount-header {
-        color: #3d3d3d;
         font-size: 24px;
         font-weight: 500;
         height: 55px;
         line-height: 1.2;
         padding: 9px 20px 0;
         text-align: center; }
+        .clinic-services .clinic-services-inside .discount-service .discount-header a {
+          color: #000; }
       .clinic-services .clinic-services-inside .discount-service .discount-content {
         color: #3d3d3d;
         font-size: 24px;
@@ -1286,11 +1374,20 @@ h4, h5, h6 {
           text-align: center;
           line-height: 1.1; }
         .contact-info .contact-info-inside .contact-info-blocks .receive-letter .receive-button {
-          background: url(../images/knopka5.png) no-repeat scroll center center;
-          height: 52px;
           line-height: 52px;
           margin-top: 4px;
           text-align: center; }
+          .contact-info .contact-info-inside .contact-info-blocks .receive-letter .receive-button .button-gold {
+            width: 80%;
+            display: block;
+            margin: 0 auto;
+            max-width: 190px; }
+          .contact-info .contact-info-inside .contact-info-blocks .receive-letter .receive-button a:before {
+            content: '';
+            background: url(../images/galka.png) no-repeat;
+            width: 20px;
+            height: 22px;
+            float: left; }
 
 .footer-copyright {
   border-top: 1px dashed #e6e6e6;
@@ -1304,19 +1401,21 @@ h4, h5, h6 {
 /*
 SLIDER
 */
-.owl-theme .owl-controls {
-  margin-top: 0; }
-
 #owl-demo .item img {
   display: block;
   width: 1903px;
   height: 541px; }
 
-.owl-theme .owl-controls .owl-page {
-  display: none; }
-
-.owl-theme .owl-controls .active {
-  display: inline-block; }
+.owl-theme .owl-controls {
+  position: absolute;
+  right: 16px;
+  bottom: 0;
+  width: 100px;
+  height: 30px; }
+  .owl-theme .owl-controls .owl-page {
+    display: none; }
+  .owl-theme .owl-controls .active {
+    display: inline-block; }
 
 .owl-theme .owl-controls .owl-page span.owl-numbers {
   width: 5px;
@@ -1329,8 +1428,12 @@ SLIDER
 
 .owl-pagination {
   position: absolute;
-  right: 3%;
-  top: 90%; }
+  right: 0;
+  top: -3px;
+  bottom: 0;
+  width: 60px;
+  height: 27px;
+  text-align: right; }
 
 .owl-prev {
   margin-left: -15px; }
@@ -1442,20 +1545,9 @@ SLIDER
         -o-transition: background 0.7s ease;
         transition: background 0.7s ease; }
 
-.bottom-arrow-left,
-.bottom-arrow-right {
-  position: absolute;
-  top: 91%;
-  height: 0; }
-
 .bottom-arrow-left {
-  left: 87%; }
-
-.owl-next {
-  position: absolute; }
-
-.bottom-arrow-right {
-  right: 8%; }
+  float: left;
+  margin-right: 20px; }
 
 .owl-buttons:before, .owl-buttons:after {
   content: "";
@@ -1477,12 +1569,12 @@ SLIDER
 .image-item {
   width: 49.0196078431%;
   float: left;
-  margin-right: 1.9607843137%; }
+  margin-right: 1.9607843137%;
+  position: relative; }
   .image-item .select-image {
-    left: 50%;
-    margin-left: -302px;
-    margin-top: -61px;
-    position: absolute; }
+    position: absolute;
+    left: 38%;
+    top: 80%; }
     .image-item .select-image .first-button {
       background: #21a3c3 none repeat scroll 0 0;
       border-radius: 7px;
@@ -1501,8 +1593,9 @@ SLIDER
 .item-content {
   width: 49.0196078431%;
   float: left;
-  margin-right: 1.9607843137%;
-  margin-right: 0; }
+  margin-right: 1.9607843137%; }
+  .item-content:last-child {
+    margin-right: 0; }
   .item-content h2, .item-content h3, .item-content h4, .item-content h5, .item-content h6 {
     color: #0095b9;
     font-size: 30px;
@@ -1510,56 +1603,95 @@ SLIDER
 
 /*finish slider*/
 /*adults-dentistry page start*/
-.adults-dentistry h1, .adults-dentistry h2, .adults-dentistry h3, .adults-dentistry h4, .adults-dentistry h5, .adults-dentistry h6 {
-  font-size: 48px; }
-
-.adults-dentistry .discount-button {
-  text-align: center; }
-
-.adults-dentistry .adults-dentistry-offers {
-  padding: 37px 0; }
-  .adults-dentistry .adults-dentistry-offers:before, .adults-dentistry .adults-dentistry-offers:after {
+.adults-dentistry {
+  padding-top: 30px; }
+  .adults-dentistry h1, .adults-dentistry h2, .adults-dentistry h3, .adults-dentistry h4, .adults-dentistry h5, .adults-dentistry h6 {
+    font-size: 48px;
+    margin-bottom: 15px; }
+  .adults-dentistry#prosthetics h2, .adults-dentistry#prosthetics h3, .adults-dentistry#prosthetics h4, .adults-dentistry#prosthetics h5, .adults-dentistry#prosthetics h6 {
+    font-size: 30px; }
+  .adults-dentistry#prosthetics .all-offers:before, .adults-dentistry#prosthetics .all-offers:after {
     content: "";
     display: table; }
-  .adults-dentistry .adults-dentistry-offers:after {
+  .adults-dentistry#prosthetics .all-offers:after {
     clear: both; }
-  .adults-dentistry .adults-dentistry-offers .offer {
-    width: 23.5294117647%;
-    float: left;
-    border: 1px solid #ededed;
-    border-radius: 6px;
-    margin-bottom: 8px; }
-    .adults-dentistry .adults-dentistry-offers .offer:nth-child(4n + 1) {
-      margin-left: 0;
-      margin-right: -100%;
-      clear: both;
-      margin-left: 0; }
-    .adults-dentistry .adults-dentistry-offers .offer:nth-child(4n + 2) {
-      margin-left: 25.4901960784%;
-      margin-right: -100%;
-      clear: none; }
-    .adults-dentistry .adults-dentistry-offers .offer:nth-child(4n + 3) {
-      margin-left: 50.9803921569%;
-      margin-right: -100%;
-      clear: none; }
-    .adults-dentistry .adults-dentistry-offers .offer:nth-child(4n + 4) {
-      margin-left: 76.4705882353%;
-      margin-right: -100%;
-      clear: none; }
-    .adults-dentistry .adults-dentistry-offers .offer:nth-child(4n) {
-      margin-right: 0; }
-    .adults-dentistry .adults-dentistry-offers .offer .offer-description {
-      text-align: center; }
-      .adults-dentistry .adults-dentistry-offers .offer .offer-description .offer-title {
-        font-size: 18px;
-        padding: 15px 0 5px; }
-        .adults-dentistry .adults-dentistry-offers .offer .offer-description .offer-title:after {
-          border-bottom: 3px solid #69dce9;
-          content: '';
-          width: 150px;
-          display: block;
-          margin: 0 auto;
-          margin-top: 10px; }
+  .adults-dentistry#prosthetics .all-persons {
+    margin-top: 25px;
+    text-align: center; }
+    .adults-dentistry#prosthetics .all-persons:before, .adults-dentistry#prosthetics .all-persons:after {
+      content: "";
+      display: table; }
+    .adults-dentistry#prosthetics .all-persons:after {
+      clear: both; }
+  .adults-dentistry .discount-button {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 10px; }
+    .adults-dentistry .discount-button a:after {
+      content: '';
+      background: url("../images/check-round.png");
+      width: 24px;
+      height: 24px;
+      position: absolute;
+      margin-left: 10px;
+      margin-top: -5px; }
+    .adults-dentistry .discount-button .button-gold {
+      max-width: 350px;
+      margin: 0 auto;
+      display: block; }
+  .adults-dentistry .adults-dentistry-offers {
+    padding: 37px 0; }
+    .adults-dentistry .adults-dentistry-offers:before, .adults-dentistry .adults-dentistry-offers:after {
+      content: "";
+      display: table; }
+    .adults-dentistry .adults-dentistry-offers:after {
+      clear: both; }
+    .adults-dentistry .adults-dentistry-offers .offer {
+      width: 23.5294117647%;
+      float: left;
+      border: 1px solid #ededed;
+      border-radius: 6px;
+      margin-bottom: 8px; }
+      .adults-dentistry .adults-dentistry-offers .offer:nth-child(4n + 1) {
+        margin-left: 0;
+        margin-right: -100%;
+        clear: both;
+        margin-left: 0; }
+      .adults-dentistry .adults-dentistry-offers .offer:nth-child(4n + 2) {
+        margin-left: 25.4901960784%;
+        margin-right: -100%;
+        clear: none; }
+      .adults-dentistry .adults-dentistry-offers .offer:nth-child(4n + 3) {
+        margin-left: 50.9803921569%;
+        margin-right: -100%;
+        clear: none; }
+      .adults-dentistry .adults-dentistry-offers .offer:nth-child(4n + 4) {
+        margin-left: 76.4705882353%;
+        margin-right: -100%;
+        clear: none; }
+      .adults-dentistry .adults-dentistry-offers .offer:nth-child(4n) {
+        margin-right: 0; }
+      .adults-dentistry .adults-dentistry-offers .offer .offer-description {
+        text-align: center; }
+        .adults-dentistry .adults-dentistry-offers .offer .offer-description .about-person {
+          padding: 5px 0; }
+          .adults-dentistry .adults-dentistry-offers .offer .offer-description .about-person span {
+            font-size: 18px;
+            min-height: 54px;
+            display: block; }
+        .adults-dentistry .adults-dentistry-offers .offer .offer-description .offer-title {
+          font-size: 18px;
+          padding: 15px 0 5px; }
+          .adults-dentistry .adults-dentistry-offers .offer .offer-description .offer-title span {
+            min-height: 54px;
+            display: block; }
+          .adults-dentistry .adults-dentistry-offers .offer .offer-description .offer-title:after {
+            border-bottom: 3px solid #69dce9;
+            content: '';
+            width: 150px;
+            display: block;
+            margin: 0 auto;
+            margin-top: 10px; }
 
 .show-offer {
   position: relative; }
@@ -1639,39 +1771,189 @@ SLIDER
   visibility: visible;
   opacity: 1; }
 
-.save-with-us h2, .save-with-us h3, .save-with-us h4, .save-with-us h5, .save-with-us h6 {
-  font-size: 30px; }
-
-.save-with-us .save-offer {
-  padding: 35px 0 60px; }
-  .save-with-us .save-offer:before, .save-with-us .save-offer:after {
-    content: "";
-    display: table; }
-  .save-with-us .save-offer:after {
-    clear: both; }
-  .save-with-us .save-offer .save-offer-inside {
-    background-image: -o-linear-gradient(to bottom, #00c3da 0%, #0097bb 100%);
-    background-image: -moz-linear-gradient(to bottom, #00c3da 0%, #0097bb 100%);
-    background-image: -webkit-linear-gradient(to bottom, #00c3da 0%, #0097bb 100%);
-    background-image: linear-gradient(to bottom, #00c3da 0%, #0097bb 100%);
-    width: 18.4%;
-    float: left;
-    margin-right: 1.9607843137%;
-    text-align: center;
-    color: #ffffff;
-    padding: 15px;
-    border-radius: 6px;
-    -webkit-box-shadow: 0 8px 6px -6px black;
-    -moz-box-shadow: 0 8px 6px -6px black;
-    box-shadow: 0 8px 6px -6px black; }
-    .save-with-us .save-offer .save-offer-inside:last-child {
-      margin-right: 0; }
+.save-with-us {
+  padding-top: 50px;
+  padding-bottom: 20px; }
+  .save-with-us h2, .save-with-us h3, .save-with-us h4, .save-with-us h5, .save-with-us h6 {
+    font-size: 30px; }
+  .save-with-us .save-offer {
+    padding: 25px 0 60px; }
+    .save-with-us .save-offer:before, .save-with-us .save-offer:after {
+      content: "";
+      display: table; }
+    .save-with-us .save-offer:after {
+      clear: both; }
+    .save-with-us .save-offer .save-offer-inside {
+      background-image: -o-linear-gradient(to bottom, #00c3da 0%, #0097bb 100%);
+      background-image: -moz-linear-gradient(to bottom, #00c3da 0%, #0097bb 100%);
+      background-image: -webkit-linear-gradient(to bottom, #00c3da 0%, #0097bb 100%);
+      background-image: linear-gradient(to bottom, #00c3da 0%, #0097bb 100%);
+      width: 18.4%;
+      float: left;
+      margin-right: 1.9607843137%;
+      text-align: center;
+      color: #ffffff;
+      padding: 15px;
+      border-radius: 6px;
+      -webkit-box-shadow: 0 8px 6px -6px black;
+      -moz-box-shadow: 0 8px 6px -6px black;
+      box-shadow: 0 8px 6px -6px black; }
+      .save-with-us .save-offer .save-offer-inside:last-child {
+        margin-right: 0; }
 
 .about {
   border-top: 1px dashed #e6e6e6;
   min-height: 275px; }
 
 /*adults-dentistry page end*/
+/****Start prosthetics page*********/
+.prosthetics {
+  border-bottom: 1px dashed #e6e6e6;
+  padding-top: 30px;
+  padding-bottom: 35px; }
+  .prosthetics h1, .prosthetics h2, .prosthetics h3, .prosthetics h4, .prosthetics h5, .prosthetics h6 {
+    font-size: 48px; }
+  .prosthetics .prosthetics-description {
+    width: 66.0130718954%;
+    float: left;
+    margin-right: 1.9607843137%;
+    text-align: justify; }
+    .prosthetics .prosthetics-description .select-options .button-aqua {
+      padding: 5px; }
+    .prosthetics .prosthetics-description .select-options ul {
+      margin: 0; }
+      .prosthetics .prosthetics-description .select-options ul li {
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -ms-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+        display: inline-block;
+        border-radius: 5px;
+        margin-right: 15px; }
+        .prosthetics .prosthetics-description .select-options ul li:hover {
+          background-color: #00c3d9;
+          color: #fff !important; }
+        .prosthetics .prosthetics-description .select-options ul li:before {
+          content: '';
+          background: url("../images/check.png") no-repeat;
+          width: 20px;
+          height: 20px;
+          float: left;
+          margin-top: 7px; }
+        .prosthetics .prosthetics-description .select-options ul li a {
+          -webkit-transition: all 0.5s ease;
+          -moz-transition: all 0.5s ease;
+          -ms-transition: all 0.5s ease;
+          -o-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+          display: block;
+          padding: 5px;
+          width: 100%;
+          margin-right: 30px; }
+          .prosthetics .prosthetics-description .select-options ul li a:hover {
+            color: #fff !important; }
+  .prosthetics .prosthetics-imagw {
+    width: 32.0261437908%;
+    float: left;
+    margin-right: 1.9607843137%;
+    margin-right: 0;
+    float: right; }
+    .prosthetics .prosthetics-imagw img {
+      width: 100%; }
+    .prosthetics .prosthetics-imagw .button-above {
+      margin: 0 auto;
+      width: 190px;
+      margin-top: 20px; }
+
+.description {
+  padding: 30px;
+  padding-top: 50px; }
+  .description h2, .description h3, .description h4, .description h5, .description h6 {
+    font-size: 36px; }
+  .description h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: left; }
+  .description .description-blocs:before, .description .description-blocs:after {
+    content: "";
+    display: table; }
+  .description .description-blocs:after {
+    clear: both; }
+  .description .description-blocs .blocs {
+    border: 1px solid #00c3d9;
+    margin-bottom: 10px;
+    padding: 10px; }
+    .description .description-blocs .blocs:before, .description .description-blocs .blocs:after {
+      content: "";
+      display: table; }
+    .description .description-blocs .blocs:after {
+      clear: both; }
+    .description .description-blocs .blocs .bloc-image {
+      width: 23.5294117647%;
+      float: left;
+      margin-right: 1.9607843137%; }
+      .description .description-blocs .blocs .bloc-image img {
+        margin: 0 auto;
+        display: block; }
+    .description .description-blocs .blocs .bloc-content {
+      width: 49.0196078431%;
+      float: left;
+      margin-right: 1.9607843137%;
+      text-align: left; }
+      .description .description-blocs .blocs .bloc-content p {
+        text-align: justify; }
+      .description .description-blocs .blocs .bloc-content .button-bloc-content {
+        float: right;
+        margin-top: -30px; }
+    .description .description-blocs .blocs .button-description {
+      width: 23.5294117647%;
+      float: left;
+      margin-right: 1.9607843137%;
+      margin-right: 0;
+      padding: 50px 0; }
+      .description .description-blocs .blocs .button-description a {
+        display: block;
+        width: 150px;
+        height: 45px;
+        margin: 0 auto; }
+
+.patients-comments {
+  padding-top: 30px; }
+  .patients-comments h2, .patients-comments h3, .patients-comments h4, .patients-comments h5, .patients-comments h6 {
+    font-size: 30px; }
+  .patients-comments .patients-comments-inside {
+    padding: 30px 0; }
+    .patients-comments .patients-comments-inside .all-comments:before, .patients-comments .patients-comments-inside .all-comments:after {
+      content: "";
+      display: table; }
+    .patients-comments .patients-comments-inside .all-comments:after {
+      clear: both; }
+    .patients-comments .patients-comments-inside .live-comment {
+      text-align: center;
+      margin: 20px 0 10px; }
+      .patients-comments .patients-comments-inside .live-comment .button-aqua-bold {
+        margin-right: 15px; }
+  .patients-comments #owl-demo-prosthetics-v2 .owl-controls {
+    top: -40px;
+    width: 60px;
+    right: -18px; }
+  .patients-comments .patient {
+    border: 1px solid #00c3d9;
+    padding: 10px;
+    border-radius: 15px; }
+    .patients-comments .patient .author-date:before, .patients-comments .patient .author-date:after {
+      content: "";
+      display: table; }
+    .patients-comments .patient .author-date:after {
+      clear: both; }
+    .patients-comments .patient .author-date .author {
+      float: left;
+      color: #00c3d9; }
+    .patients-comments .patient .author-date .date {
+      float: right; }
+
+/********end prosthetics page*******/
 /*Start Responsive*/
 @media only screen and (max-width: 1080px) {
   .wrapper {
@@ -1679,6 +1961,14 @@ SLIDER
     padding-left: 30px; }
   .main-header .primary_nav_wrap {
     display: none; }
+  .brad-cramps {
+    display: none; }
+  .appointments .appointments-form-input .text-input {
+    margin-bottom: 10px;
+    float: none;
+    margin-right: inherit; }
+  .appointments .appointments-form-input .button-input {
+    width: 100%; }
   .footer-menu .header-nav {
     display: none; }
   .header-nav #mobile-header {
@@ -1687,8 +1977,74 @@ SLIDER
   .sidr ul li ul {
     display: none; } }
 
+/******Modal style*******/
+.modal-example-content {
+  width: 600px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  background-color: #FFF;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  outline: 0 none; }
+
+.modal-example-header {
+  border-bottom: 1px solid #E5E5E5;
+  padding: 10px 15px;
+  padding-bottom: 35px; }
+
+.modal-example-header h4 {
+  margin: 0;
+  font-size: 18px;
+  float: left; }
+
+.modal-example-body {
+  padding: 20px;
+  text-align: initial; }
+
+button.close-modal {
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  -webkit-appearance: none; }
+
+.close-modal {
+  float: right;
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 1;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  opacity: .2;
+  filter: alpha(opacity=20); }
+
+/***end modal ***/
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
+  .prosthesis-examples #owl-demo-prosthetics-v1 .owl-controls {
+    left: inherit; }
+  .prosthesis-examples #owl-demo-prosthetics-v1 .image-item {
+    margin-bottom: 50px; }
+  .description .description-blocs .blocs .bloc-image {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0; }
+  .description .description-blocs .blocs .bloc-content {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0; }
+  .description .description-blocs .blocs .button-description {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 20px 0; }
+  .cermet-advantages .description {
+    padding: 20px 0; }
+  .cermet-advantages .description .button {
+    margin-top: 50px;
+    margin-bottom: 20px; }
   .popular-cermet .cermet-part {
     width: 100%;
     float: left;
@@ -1696,8 +2052,12 @@ SLIDER
     margin-right: 0; }
   .image-item {
     width: 100%; }
+    .image-item img {
+      display: block;
+      margin: 0 auto; }
   .item-content {
-    width: 100%; }
+    width: 100%;
+    margin-bottom: 30px; }
   .adults-dentistry .adults-dentistry-offers .offer {
     width: 32.0261437908%;
     float: left; }
@@ -1735,6 +2095,14 @@ SLIDER
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
+  .clinic-services .all-shares-button {
+    position: relative;
+    left: inherit;
+    margin: 0 auto; }
+  .appointments .appointments-form-input .button-input {
+    margin: 0 auto; }
+  .item-content {
+    margin-bottom: 30px; }
   .cermet-advantages .description .image {
     width: 100%;
     float: left;
@@ -1793,6 +2161,122 @@ SLIDER
     margin-right: 0; } }
 
 @media only screen and (max-width: 640px) {
+  .cermet h1, .cermet h2, .cermet h3, .cermet h4, .cermet h5, .cermet h6, .cermet h2, .cermet h3, .cermet h4, .cermet h5, .cermet h6,
+  .cermet-advantages h1,
+  .cermet-advantages h2,
+  .cermet-advantages h3,
+  .cermet-advantages h4,
+  .cermet-advantages h5,
+  .cermet-advantages h6,
+  .cermet-advantages h2,
+  .cermet-advantages h3,
+  .cermet-advantages h4,
+  .cermet-advantages h5,
+  .cermet-advantages h6,
+  .popular-cermet h1,
+  .popular-cermet h2,
+  .popular-cermet h3,
+  .popular-cermet h4,
+  .popular-cermet h5,
+  .popular-cermet h6,
+  .popular-cermet h2,
+  .popular-cermet h3,
+  .popular-cermet h4,
+  .popular-cermet h5,
+  .popular-cermet h6,
+  .prosthesis-types h1,
+  .prosthesis-types h2,
+  .prosthesis-types h3,
+  .prosthesis-types h4,
+  .prosthesis-types h5,
+  .prosthesis-types h6,
+  .prosthesis-types h2,
+  .prosthesis-types h3,
+  .prosthesis-types h4,
+  .prosthesis-types h5,
+  .prosthesis-types h6,
+  .item-content h1,
+  .item-content h2,
+  .item-content h3,
+  .item-content h4,
+  .item-content h5,
+  .item-content h6,
+  .item-content h2,
+  .item-content h3,
+  .item-content h4,
+  .item-content h5,
+  .item-content h6,
+  .methods-prosthesis h1,
+  .methods-prosthesis h2,
+  .methods-prosthesis h3,
+  .methods-prosthesis h4,
+  .methods-prosthesis h5,
+  .methods-prosthesis h6,
+  .methods-prosthesis h2,
+  .methods-prosthesis h3,
+  .methods-prosthesis h4,
+  .methods-prosthesis h5,
+  .methods-prosthesis h6,
+  .advantages-clinic h1,
+  .advantages-clinic h2,
+  .advantages-clinic h3,
+  .advantages-clinic h4,
+  .advantages-clinic h5,
+  .advantages-clinic h6,
+  .advantages-clinic h2,
+  .advantages-clinic h3,
+  .advantages-clinic h4,
+  .advantages-clinic h5,
+  .advantages-clinic h6,
+  .adults-dentistry h1,
+  .adults-dentistry h2,
+  .adults-dentistry h3,
+  .adults-dentistry h4,
+  .adults-dentistry h5,
+  .adults-dentistry h6,
+  .adults-dentistry h2,
+  .adults-dentistry h3,
+  .adults-dentistry h4,
+  .adults-dentistry h5,
+  .adults-dentistry h6,
+  .save-with-us h1,
+  .save-with-us h2,
+  .save-with-us h3,
+  .save-with-us h4,
+  .save-with-us h5,
+  .save-with-us h6,
+  .save-with-us h2,
+  .save-with-us h3,
+  .save-with-us h4,
+  .save-with-us h5,
+  .save-with-us h6,
+  .about h1,
+  .about h2,
+  .about h3,
+  .about h4,
+  .about h5,
+  .about h6,
+  .about h2,
+  .about h3,
+  .about h4,
+  .about h5,
+  .about h6 {
+    font-size: 24px;
+    margin-bottom: 10px; }
+  .prosthetics .prosthetics-description {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0; }
+  .prosthetics .prosthetics-imagw {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0; }
+    .prosthetics .prosthetics-imagw img {
+      display: none; }
+  .description .description-blocs .blocs .bloc-content .button-bloc-content {
+    margin-top: 0; }
   .prosthesis-types .type-list {
     margin-bottom: 20px; }
     .prosthesis-types .type-list ul {
@@ -1845,6 +2329,8 @@ SLIDER
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
+  #owl-demo-prosthetics-v1 .image-item img {
+    width: 100%; }
   .main-header .header-logo {
     width: 100%;
     float: left;
