@@ -6,22 +6,21 @@ $(document).ready(function () {
     });
 
 
-    $(".sidr-class-primary_nav_wrap ul li a").click(function () {
+    $(".sidr-class-primary_nav_wrap ul li a").click(function (event) {
         event.preventDefault();
         $(this).next('ul').slideToggle('slow');
     });
 
     $('header, main, footer').click(function () {
-
         $.sidr('close', 'sidr-main');
     });
 
-    $('.show').on("click", function () {
+    $('.show').on("click", function (event) {
         event.preventDefault();
         $(this).parent().find(".list-to-show").fadeToggle(200);
     });
 
-    $('.hide').on("click", function () {
+    $('.hide').on("click", function (event) {
         event.preventDefault();
         $(this).parents(".list-to-show").fadeToggle(200);
     });
@@ -33,6 +32,42 @@ $(document).ready(function () {
             effect: 'fadein'
         });
         e.preventDefault();
+    });
+
+
+
+    $('#posle').on('click', getNext);
+
+
+
+    $('#do').on('click', getPrev);
+
+    function getNext() {
+        var $curr = $('.slideshow img:visible'),
+            $next = ($curr.next().length) ? $curr.next() : $('.slideshow img').first();
+
+        transition($curr, $next);
+    }
+
+    function getPrev() {
+        var $curr = $('.slideshow img:visible'),
+            $next = ($curr.prev().length) ? $curr.prev() : $('.slideshow img').last();
+        transition($curr, $next);
+
+    }
+
+    function transition($curr, $next) {
+
+        $next.css('display', 'block').fadeIn('slow', function () {
+            $curr.hide().css('display', 'none');
+            $next.css('display', 'block');
+        });
+
+    }
+
+    $( '.select-image button' ).on( 'click', function() {
+        $( this ).parent().find( 'button.active' ).removeClass( 'active' );
+        $( this ).addClass( 'active' );
     });
 
 

@@ -91,7 +91,7 @@ body {
 
 .wrapper {
   @include container();
-  max-width: 1024px;
+  max-width: 1100px;
   width: 100%;
   margin-top: 0;
 }
@@ -107,6 +107,9 @@ body {
   text-align: center;
   line-height: 1;
   transition: all 0.4s ease 0s;
+  &:hover {
+    opacity: 0.7;
+  }
 }
 
 .button-aqua {
@@ -117,6 +120,9 @@ body {
   transition: all 0.4s ease 0s;
   line-height: 30px;
   border-radius: 5px;
+  &:hover {
+    opacity: 0.7;
+  }
 }
 
 .button-aqua-bold {
@@ -129,6 +135,9 @@ body {
   border-radius: 5px;
   font-weight: bold;
   font-size: 16px;
+  &:hover {
+    opacity: 0.7;
+  }
 }
 
 .button-aqua-dots {
@@ -137,6 +146,9 @@ body {
   font-weight: bold;
   text-align: center;
   transition: all 0.4s ease 0s;
+  &:hover {
+    opacity: 0.7;
+  }
 
 }
 
@@ -223,7 +235,6 @@ h4, h5, h6 {
         float: right;
         font-size: 20px;
         font-weight: 500;
-        width: 202px;
         padding-bottom: 4px;
         padding-left: 30px;
       }
@@ -293,7 +304,7 @@ h4, h5, h6 {
     line-height: 26px;
     text-decoration: none;
     text-transform: uppercase;
-    padding: 0 2px;
+    padding: 0 6px;
     border-radius: 7px;
   }
 
@@ -320,12 +331,12 @@ h4, h5, h6 {
 
   .primary_nav_wrap ul ul li {
     float: none;
-    width: 200px
+    width: 200px;
   }
 
   .primary_nav_wrap ul ul a {
     line-height: 120%;
-    padding: 10px 15px
+    padding: 10px 15px;
   }
 
   .primary_nav_wrap ul ul ul {
@@ -578,8 +589,8 @@ h4, h5, h6 {
   .prosthesis-examples-inside {
     padding: 50px 0;
   }
-  #owl-demo-bottom{
-    h2{
+  #owl-demo-bottom {
+    h2 {
       text-align: left;
     }
     text-align: justify;
@@ -594,6 +605,7 @@ h4, h5, h6 {
     }
     .image-item {
       margin-right: 0;
+
     }
     .owl-controls {
       left: 13px;
@@ -695,6 +707,9 @@ h4, h5, h6 {
       line-height: 1;
       transition: all 0.4s ease 0s;
       border: none;
+      &:hover {
+        opacity: 0.7;
+      }
     }
   }
 }
@@ -750,13 +765,17 @@ h4, h5, h6 {
     width: 113px;
     a {
       transition: all 0.4s ease 0s;
-      border: 1px solid #0095b9;
+      border: 1px solid $aqua-color;
       border-radius: 6px;
-      color: #0095b9;
+      color: $aqua-color;
       display: block;
       font-size: 18px;
       font-weight: bold;
       text-decoration: none;
+      &:hover {
+        color: $white;
+        background-color: $aqua-color;
+      }
     }
   }
   .clinic-services-inside {
@@ -884,6 +903,10 @@ h4, h5, h6 {
             font-weight: bold;
             text-decoration: none;
             transition: all 0.4s ease 0s;
+            &:hover {
+              color: #000;
+              border-bottom: 1px dashed #000;
+            }
           }
         }
       }
@@ -914,6 +937,23 @@ h4, h5, h6 {
           }
         }
       }
+    }
+  }
+}
+
+.footer-menu {
+  .header-nav {
+    .primary_nav_wrap ul li {
+      padding: 0 9px;
+    }
+    .primary_nav_wrap ul li:hover {
+      border-radius: 0;
+      background: none;
+    }
+
+    .primary_nav_wrap ul li a:hover {
+      border-bottom: 1px dashed $aqua-color;
+      color: $aqua-color;
     }
   }
 }
@@ -1045,7 +1085,6 @@ SLIDER
 }
 
 #owl-demo-bottom .item-bottom-slider img {
-  display: block;
   width: 100%;
   height: auto;
   max-width: 460px;
@@ -1111,28 +1150,41 @@ SLIDER
   }
 }
 
+.slideshow {
+  position: relative;
+}
+
+.slideshow img {
+  display: none;
+}
+
+.slideshow img:first-child {
+  display: block;
+  /* overrides the previous style */
+}
+
 .image-item {
   @include span(6);
+  @include clearfix();
   position: relative;
   .select-image {
     position: absolute;
-    left: 38%;
-    top: 80%;
-    .first-button {
-      background: #21a3c3 none repeat scroll 0 0;
-      border-radius: 7px;
-      color: $white;
+    z-index: 9999;
+    top: 77%;
+    left: 40%;
+    button{
+      border: none;
+      background-color: inherit;
+      color: #000;
+      text-shadow: none;
       font-weight: bold;
-      margin-right: 5px;
-      padding: 2px 8px 2px 10px;
-      text-decoration: none;
-    }
-    .second-button {
-      color: #000000;
       font-size: 14px;
-      font-weight: bold;
-      text-decoration: none;
-      transition: all 0.4s ease 0s;
+      padding: 5px 10px;
+      border-radius: 5px;
+      &.active{
+        color: #fff;
+        background: #22a3c3;
+      }
     }
   }
 }
@@ -1177,17 +1229,16 @@ SLIDER
     text-align: center;
     margin-top: 30px;
     margin-bottom: 10px;
-    a:after{
+    a:after {
       content: '';
-      background: url("../images/check-round.png");
+      background: url("../images/check-round.png") no-repeat;
       width: 24px;
       height: 24px;
       position: absolute;
-      margin-left: 10px;
-      margin-top: -5px;
+      margin-left: 12px;
 
     }
-    .button-gold{
+    .button-gold {
       max-width: 350px;
       margin: 0 auto;
       display: block;
@@ -1386,6 +1437,7 @@ SLIDER
     @include span(8);
     text-align: justify;
     .select-options {
+      @include clearfix();
       .button-aqua {
         padding: 5px;
       }
@@ -1394,30 +1446,31 @@ SLIDER
         li {
           @include transition(all .5s ease);
           display: inline-block;
-          border-radius: 5px;
-          margin-right: 15px;
-          &:hover {
-            background-color: $aqua-color;
-            color: #fff !important;
-          }
-          &:before {
-            content: '';
-            background: url("../images/check.png") no-repeat;
-            width: 20px;
-            height: 20px;
-            float: left;
-            margin-top: 7px;
-          }
+
           a {
             @include transition(all .5s ease);
             display: block;
             padding: 5px;
-            width: 100%;
+            border-radius: 5px;
             margin-right: 30px;
             &:hover {
+              @include transition(all .5s ease);
+              background-color: $aqua-color;
               color: #fff !important;
+              &:before {
+                @include transition(all .5s ease);
+                background: url("../images/check-round.png") no-repeat;
+              }
             }
-
+            &:before {
+              @include transition(all .5s ease);
+              content: '';
+              background: url("../images/check.png") no-repeat;
+              width: 20px;
+              height: 20px;
+              float: left;
+              margin-top: 3px;
+            }
           }
         }
       }
@@ -1533,50 +1586,8 @@ SLIDER
   }
 }
 
-/********end prosthetics page*******/
-
-/*Start Responsive*/
-@media only screen and (max-width: 1200px) {
-
-}
-
-@media only screen and (max-width: 1080px) {
-  .wrapper {
-    padding-right: 30px;
-    padding-left: 30px;
-  }
-  .main-header .primary_nav_wrap {
-    display: none;
-  }
-  .brad-cramps {
-    display: none;
-  }
-  .appointments .appointments-form-input .text-input {
-    margin-bottom: 10px;
-    float: none;
-    margin-right: inherit;
-  }
-  .appointments .appointments-form-input .button-input {
-    width: 100%;
-
-  }
-  .footer-menu .header-nav {
-    display: none;
-  }
-  .header-nav #mobile-header {
-    display: block;
-    float: right;
-  }
-  .sidr ul li ul {
-    display: none;
-
-  }
-
-}
-
-
 /******Modal style*******/
-.modal-example-content{
+.modal-example-content {
   width: 600px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
   background-color: #FFF;
@@ -1584,6 +1595,7 @@ SLIDER
   border-radius: 6px;
   outline: 0 none;
 }
+
 .modal-example-header {
   border-bottom: 1px solid #E5E5E5;
   padding: 10px 15px;
@@ -1600,6 +1612,7 @@ SLIDER
   padding: 20px;
   text-align: initial;
 }
+
 button.close-modal {
   padding: 0;
   cursor: pointer;
@@ -1607,6 +1620,7 @@ button.close-modal {
   border: 0;
   -webkit-appearance: none;
 }
+
 .close-modal {
   float: right;
   font-size: 21px;
@@ -1620,9 +1634,57 @@ button.close-modal {
 
 /***end modal ***/
 
+/********end prosthetics page*******/
+
+/*Start Responsive*/
+@media only screen and (max-width: 1200px) {
+
+}
+
+@media only screen and (max-width: 1155px) {
+  .wrapper {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+  .main-header .primary_nav_wrap {
+    display: none;
+  }
+  .header-nav #mobile-header {
+    display: block;
+    float: right;
+  }
+  .sidr ul li ul {
+    display: none;
+  }
+  .footer-menu .header-nav {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1080px) {
+
+  .brad-cramps {
+    display: none;
+  }
+  .appointments .appointments-form-input .text-input {
+    margin-bottom: 10px;
+    float: none;
+    margin-right: inherit;
+  }
+  .appointments .appointments-form-input .button-input {
+    width: 100%;
+  }
+
+}
+
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
+  .prosthetics .prosthetics-description .select-options ul li {
+    a {
+      margin-right: 0;
+    }
 
+  }
   .prosthesis-examples #owl-demo-prosthetics-v1 .owl-controls {
     left: inherit;
 
@@ -1642,9 +1704,9 @@ button.close-modal {
   }
 
   .cermet-advantages .description {
-    padding: 20px 0 ;
+    padding: 20px 0;
   }
-  .cermet-advantages .description .button{
+  .cermet-advantages .description .button {
     margin-top: 50px;
     margin-bottom: 20px;
   }
@@ -1654,13 +1716,13 @@ button.close-modal {
   .image-item {
     width: 100%;
     img {
-      display: block;
       margin: 0 auto;
     }
   }
   .item-content {
     width: 100%;
-    margin-bottom: 30px;
+    margin: 30px 0;
+
   }
   .adults-dentistry .adults-dentistry-offers .offer {
     @include gallery(4);
@@ -1684,7 +1746,7 @@ button.close-modal {
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
-  .clinic-services .all-shares-button{
+  .clinic-services .all-shares-button {
     position: relative;
     left: inherit;
     margin: 0 auto;
@@ -1759,7 +1821,10 @@ button.close-modal {
   .advantages-clinic,
   .adults-dentistry,
   .save-with-us,
-  .about{
+  .about,
+  .prosthetics,
+  .description-inside,
+  .patients-comments {
     h1, h2 {
       font-size: 24px;
       margin-bottom: 10px;
@@ -1823,11 +1888,58 @@ button.close-modal {
     padding-top: 15px;
     padding-bottom: 20px;
   }
+  #contact-area {
+    label {
+      width: 100%;
+      display: block;
+      margin: 5px 0;
+    }
+    input.submit-button {
+      display: block;
+      margin-top: 10px;
+    }
+  }
+  .description {
+    padding: 0;
+  }
 }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
-  #owl-demo-prosthetics-v1 .image-item img{
+  .prosthetics .prosthetics-description .select-options {
+    margin-bottom: 20px;
+    ul li {
+      list-style: none;
+      display: block;
+      float: left;
+      width: 72%;
+      max-width: 153px;
+      margin: 4px 0;
+      margin-right: 10px;
+    }
+  }
+  .main-header .header-phone .phone-number {
+    width: 210px;
+  }
+  .patients-comments .patients-comments-inside .live-comment {
+    .button-aqua-bold {
+      margin-bottom: 20px;
+      width: 100%;
+      display: block;
+      height: 45px;
+      line-height: initial;
+
+    }
+    .button-aqua-dots {
+      max-width: 175px;
+      margin: 0 auto;
+      width: 100%;
+      display: block;
+
+    }
+
+  }
+  #owl-demo-prosthetics-v1 .image-item img {
     width: 100%;
   }
   .main-header .header-logo {

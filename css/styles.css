@@ -650,7 +650,7 @@ body {
   max-width: 1071;
   margin-left: auto;
   margin-right: auto;
-  max-width: 1024px;
+  max-width: 1100px;
   width: 100%;
   margin-top: 0; }
   .wrapper:after {
@@ -672,6 +672,8 @@ body {
   text-align: center;
   line-height: 1;
   transition: all 0.4s ease 0s; }
+  .button-gold:hover {
+    opacity: 0.7; }
 
 .button-aqua {
   background-color: #00c3d9;
@@ -681,6 +683,8 @@ body {
   transition: all 0.4s ease 0s;
   line-height: 30px;
   border-radius: 5px; }
+  .button-aqua:hover {
+    opacity: 0.7; }
 
 .button-aqua-bold {
   background-image: -o-linear-gradient(to bottom, #00c3da 0%, #0098bb 100%);
@@ -695,6 +699,8 @@ body {
   border-radius: 5px;
   font-weight: bold;
   font-size: 16px; }
+  .button-aqua-bold:hover {
+    opacity: 0.7; }
 
 .button-aqua-dots {
   border-bottom: 2px dotted #00c3d9;
@@ -702,6 +708,8 @@ body {
   font-weight: bold;
   text-align: center;
   transition: all 0.4s ease 0s; }
+  .button-aqua-dots:hover {
+    opacity: 0.7; }
 
 p {
   margin-bottom: 18px;
@@ -780,7 +788,6 @@ h4, h5, h6 {
       float: right;
       font-size: 20px;
       font-weight: 500;
-      width: 202px;
       padding-bottom: 4px;
       padding-left: 30px; }
     .main-header .header-phone .phone-link {
@@ -845,7 +852,7 @@ h4, h5, h6 {
     line-height: 26px;
     text-decoration: none;
     text-transform: uppercase;
-    padding: 0 2px;
+    padding: 0 6px;
     border-radius: 7px; }
   .header-nav .primary_nav_wrap ul li:hover {
     background-image: -o-linear-gradient(to right, #66b5ce 0%, #6cbfd5 100%);
@@ -1189,6 +1196,8 @@ h4, h5, h6 {
       line-height: 1;
       transition: all 0.4s ease 0s;
       border: none; }
+      .appointments .appointments-form-input .button-input:hover {
+        opacity: 0.7; }
 
 .advantages-clinic {
   padding: 30px 0; }
@@ -1233,13 +1242,16 @@ h4, h5, h6 {
     width: 113px; }
     .clinic-services .all-shares-button a {
       transition: all 0.4s ease 0s;
-      border: 1px solid #0095b9;
+      border: 1px solid #00c3d9;
       border-radius: 6px;
-      color: #0095b9;
+      color: #00c3d9;
       display: block;
       font-size: 18px;
       font-weight: bold;
       text-decoration: none; }
+      .clinic-services .all-shares-button a:hover {
+        color: #ffffff;
+        background-color: #00c3d9; }
   .clinic-services .clinic-services-inside {
     padding: 30px 0;
     width: 83.0065359477%;
@@ -1364,6 +1376,9 @@ h4, h5, h6 {
             font-weight: bold;
             text-decoration: none;
             transition: all 0.4s ease 0s; }
+            .contact-info .contact-info-inside .contact-info-blocks .call .call-info a:hover {
+              color: #000;
+              border-bottom: 1px dashed #000; }
       .contact-info .contact-info-inside .contact-info-blocks .receive-letter {
         width: 23.5294117647%;
         float: left;
@@ -1388,6 +1403,17 @@ h4, h5, h6 {
             width: 20px;
             height: 22px;
             float: left; }
+
+.footer-menu .header-nav .primary_nav_wrap ul li {
+  padding: 0 9px; }
+
+.footer-menu .header-nav .primary_nav_wrap ul li:hover {
+  border-radius: 0;
+  background: none; }
+
+.footer-menu .header-nav .primary_nav_wrap ul li a:hover {
+  border-bottom: 1px dashed #00c3d9;
+  color: #00c3d9; }
 
 .footer-copyright {
   border-top: 1px dashed #e6e6e6;
@@ -1495,7 +1521,6 @@ SLIDER
   font-size: 20px; }
 
 #owl-demo-bottom .item-bottom-slider img {
-  display: block;
   width: 100%;
   height: auto;
   max-width: 460px;
@@ -1565,29 +1590,43 @@ SLIDER
 .owl-demo-bottom .owl-prev {
   margin-top: 10px; }
 
+.slideshow {
+  position: relative; }
+
+.slideshow img {
+  display: none; }
+
+.slideshow img:first-child {
+  display: block;
+  /* overrides the previous style */ }
+
 .image-item {
   width: 49.0196078431%;
   float: left;
   margin-right: 1.9607843137%;
   position: relative; }
+  .image-item:before, .image-item:after {
+    content: "";
+    display: table; }
+  .image-item:after {
+    clear: both; }
   .image-item .select-image {
     position: absolute;
-    left: 38%;
-    top: 80%; }
-    .image-item .select-image .first-button {
-      background: #21a3c3 none repeat scroll 0 0;
-      border-radius: 7px;
-      color: #ffffff;
+    z-index: 9999;
+    top: 77%;
+    left: 40%; }
+    .image-item .select-image button {
+      border: none;
+      background-color: inherit;
+      color: #000;
+      text-shadow: none;
       font-weight: bold;
-      margin-right: 5px;
-      padding: 2px 8px 2px 10px;
-      text-decoration: none; }
-    .image-item .select-image .second-button {
-      color: #000000;
       font-size: 14px;
-      font-weight: bold;
-      text-decoration: none;
-      transition: all 0.4s ease 0s; }
+      padding: 5px 10px;
+      border-radius: 5px; }
+      .image-item .select-image button.active {
+        color: #fff;
+        background: #22a3c3; }
 
 .item-content {
   width: 49.0196078431%;
@@ -1628,12 +1667,11 @@ SLIDER
     margin-bottom: 10px; }
     .adults-dentistry .discount-button a:after {
       content: '';
-      background: url("../images/check-round.png");
+      background: url("../images/check-round.png") no-repeat;
       width: 24px;
       height: 24px;
       position: absolute;
-      margin-left: 10px;
-      margin-top: -5px; }
+      margin-left: 12px; }
     .adults-dentistry .discount-button .button-gold {
       max-width: 350px;
       margin: 0 auto;
@@ -1817,6 +1855,11 @@ SLIDER
     float: left;
     margin-right: 1.9607843137%;
     text-align: justify; }
+    .prosthetics .prosthetics-description .select-options:before, .prosthetics .prosthetics-description .select-options:after {
+      content: "";
+      display: table; }
+    .prosthetics .prosthetics-description .select-options:after {
+      clear: both; }
     .prosthetics .prosthetics-description .select-options .button-aqua {
       padding: 5px; }
     .prosthetics .prosthetics-description .select-options ul {
@@ -1827,19 +1870,7 @@ SLIDER
         -ms-transition: all 0.5s ease;
         -o-transition: all 0.5s ease;
         transition: all 0.5s ease;
-        display: inline-block;
-        border-radius: 5px;
-        margin-right: 15px; }
-        .prosthetics .prosthetics-description .select-options ul li:hover {
-          background-color: #00c3d9;
-          color: #fff !important; }
-        .prosthetics .prosthetics-description .select-options ul li:before {
-          content: '';
-          background: url("../images/check.png") no-repeat;
-          width: 20px;
-          height: 20px;
-          float: left;
-          margin-top: 7px; }
+        display: inline-block; }
         .prosthetics .prosthetics-description .select-options ul li a {
           -webkit-transition: all 0.5s ease;
           -moz-transition: all 0.5s ease;
@@ -1848,10 +1879,35 @@ SLIDER
           transition: all 0.5s ease;
           display: block;
           padding: 5px;
-          width: 100%;
+          border-radius: 5px;
           margin-right: 30px; }
           .prosthetics .prosthetics-description .select-options ul li a:hover {
+            -webkit-transition: all 0.5s ease;
+            -moz-transition: all 0.5s ease;
+            -ms-transition: all 0.5s ease;
+            -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+            background-color: #00c3d9;
             color: #fff !important; }
+            .prosthetics .prosthetics-description .select-options ul li a:hover:before {
+              -webkit-transition: all 0.5s ease;
+              -moz-transition: all 0.5s ease;
+              -ms-transition: all 0.5s ease;
+              -o-transition: all 0.5s ease;
+              transition: all 0.5s ease;
+              background: url("../images/check-round.png") no-repeat; }
+          .prosthetics .prosthetics-description .select-options ul li a:before {
+            -webkit-transition: all 0.5s ease;
+            -moz-transition: all 0.5s ease;
+            -ms-transition: all 0.5s ease;
+            -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+            content: '';
+            background: url("../images/check.png") no-repeat;
+            width: 20px;
+            height: 20px;
+            float: left;
+            margin-top: 3px; }
   .prosthetics .prosthetics-imagw {
     width: 32.0261437908%;
     float: left;
@@ -1952,30 +2008,6 @@ SLIDER
     .patients-comments .patient .author-date .date {
       float: right; }
 
-/********end prosthetics page*******/
-/*Start Responsive*/
-@media only screen and (max-width: 1080px) {
-  .wrapper {
-    padding-right: 30px;
-    padding-left: 30px; }
-  .main-header .primary_nav_wrap {
-    display: none; }
-  .brad-cramps {
-    display: none; }
-  .appointments .appointments-form-input .text-input {
-    margin-bottom: 10px;
-    float: none;
-    margin-right: inherit; }
-  .appointments .appointments-form-input .button-input {
-    width: 100%; }
-  .footer-menu .header-nav {
-    display: none; }
-  .header-nav #mobile-header {
-    display: block;
-    float: right; }
-  .sidr ul li ul {
-    display: none; } }
-
 /******Modal style*******/
 .modal-example-content {
   width: 600px;
@@ -2017,8 +2049,36 @@ button.close-modal {
   filter: alpha(opacity=20); }
 
 /***end modal ***/
+/********end prosthetics page*******/
+/*Start Responsive*/
+@media only screen and (max-width: 1155px) {
+  .wrapper {
+    padding-right: 30px;
+    padding-left: 30px; }
+  .main-header .primary_nav_wrap {
+    display: none; }
+  .header-nav #mobile-header {
+    display: block;
+    float: right; }
+  .sidr ul li ul {
+    display: none; }
+  .footer-menu .header-nav {
+    display: none; } }
+
+@media only screen and (max-width: 1080px) {
+  .brad-cramps {
+    display: none; }
+  .appointments .appointments-form-input .text-input {
+    margin-bottom: 10px;
+    float: none;
+    margin-right: inherit; }
+  .appointments .appointments-form-input .button-input {
+    width: 100%; } }
+
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
+  .prosthetics .prosthetics-description .select-options ul li a {
+    margin-right: 0; }
   .prosthesis-examples #owl-demo-prosthetics-v1 .owl-controls {
     left: inherit; }
   .prosthesis-examples #owl-demo-prosthetics-v1 .image-item {
@@ -2052,11 +2112,10 @@ button.close-modal {
   .image-item {
     width: 100%; }
     .image-item img {
-      display: block;
       margin: 0 auto; }
   .item-content {
     width: 100%;
-    margin-bottom: 30px; }
+    margin: 30px 0; }
   .adults-dentistry .adults-dentistry-offers .offer {
     width: 32.0261437908%;
     float: left; }
@@ -2259,7 +2318,40 @@ button.close-modal {
   .about h3,
   .about h4,
   .about h5,
-  .about h6 {
+  .about h6,
+  .prosthetics h1,
+  .prosthetics h2,
+  .prosthetics h3,
+  .prosthetics h4,
+  .prosthetics h5,
+  .prosthetics h6,
+  .prosthetics h2,
+  .prosthetics h3,
+  .prosthetics h4,
+  .prosthetics h5,
+  .prosthetics h6,
+  .description-inside h1,
+  .description-inside h2,
+  .description-inside h3,
+  .description-inside h4,
+  .description-inside h5,
+  .description-inside h6,
+  .description-inside h2,
+  .description-inside h3,
+  .description-inside h4,
+  .description-inside h5,
+  .description-inside h6,
+  .patients-comments h1,
+  .patients-comments h2,
+  .patients-comments h3,
+  .patients-comments h4,
+  .patients-comments h5,
+  .patients-comments h6,
+  .patients-comments h2,
+  .patients-comments h3,
+  .patients-comments h4,
+  .patients-comments h5,
+  .patients-comments h6 {
     font-size: 24px;
     margin-bottom: 10px; }
   .prosthetics .prosthetics-description {
@@ -2324,10 +2416,42 @@ button.close-modal {
     text-align: center; }
   .footer-copyright {
     padding-top: 15px;
-    padding-bottom: 20px; } }
+    padding-bottom: 20px; }
+  #contact-area label {
+    width: 100%;
+    display: block;
+    margin: 5px 0; }
+  #contact-area input.submit-button {
+    display: block;
+    margin-top: 10px; }
+  .description {
+    padding: 0; } }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
+  .prosthetics .prosthetics-description .select-options {
+    margin-bottom: 20px; }
+    .prosthetics .prosthetics-description .select-options ul li {
+      list-style: none;
+      display: block;
+      float: left;
+      width: 72%;
+      max-width: 153px;
+      margin: 4px 0;
+      margin-right: 10px; }
+  .main-header .header-phone .phone-number {
+    width: 210px; }
+  .patients-comments .patients-comments-inside .live-comment .button-aqua-bold {
+    margin-bottom: 20px;
+    width: 100%;
+    display: block;
+    height: 45px;
+    line-height: initial; }
+  .patients-comments .patients-comments-inside .live-comment .button-aqua-dots {
+    max-width: 175px;
+    margin: 0 auto;
+    width: 100%;
+    display: block; }
   #owl-demo-prosthetics-v1 .image-item img {
     width: 100%; }
   .main-header .header-logo {
