@@ -880,38 +880,6 @@ h4, h5, h6 {
   .header-nav .primary_nav_wrap ul li:hover > ul {
     display: block; }
 
-.primary_nav_wrap li > a:after {
-  margin-left: 5px;
-  content: '\25BC'; }
-
-.primary_nav_wrap li > a:only-child:after {
-  margin-left: 0;
-  content: ''; }
-
-.primary_nav_wrap li > ul li a:after {
-  margin-left: 5px;
-  content: '\25BA'; }
-
-.sidr-class-primary_nav_wrap li > a:after {
-  margin-left: 5px;
-  content: '\25BC'; }
-
-.sidr-class-primary_nav_wrap li > a:only-child:after {
-  margin-left: 0;
-  content: ''; }
-
-.sidr-class-primary_nav_wrap li > ul li a:after {
-  margin-left: 5px;
-  content: '\25BA'; }
-
-.sidr-class-primary_nav_wrap ul li ul li a:after {
-  margin-left: 5px;
-  content: '\25BC'; }
-
-.sidr-class-primary_nav_wrap li > ul li > ul a:after {
-  margin-left: 5px;
-  content: '\25BC'; }
-
 /**end menu**/
 .slide {
   background: url("../images/slide.jpg") no-repeat scroll center top;
@@ -1895,7 +1863,12 @@ SLIDER
               -ms-transition: all 0.5s ease;
               -o-transition: all 0.5s ease;
               transition: all 0.5s ease;
-              background: url("../images/check-round.png") no-repeat; }
+              content: '';
+              background: url("../images/check-round.png") no-repeat;
+              width: 20px;
+              height: 20px;
+              float: left;
+              margin-top: 3px; }
           .prosthetics .prosthetics-description .select-options ul li a:before {
             -webkit-transition: all 0.5s ease;
             -moz-transition: all 0.5s ease;
@@ -2429,6 +2402,14 @@ button.close-modal {
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
+  .adults-dentistry#prosthetics .all-persons .button-aqua-bold {
+    font-size: 14px;
+    display: block;
+    line-height: 1.1;
+    max-width: 320px;
+    margin: 0 auto; }
+  .adults-dentistry .discount-button .button-gold {
+    font-size: 14px; }
   .prosthetics .prosthetics-description .select-options {
     margin-bottom: 20px; }
     .prosthetics .prosthetics-description .select-options ul li {
@@ -2439,8 +2420,6 @@ button.close-modal {
       max-width: 153px;
       margin: 4px 0;
       margin-right: 10px; }
-  .main-header .header-phone .phone-number {
-    width: 210px; }
   .patients-comments .patients-comments-inside .live-comment .button-aqua-bold {
     margin-bottom: 20px;
     width: 100%;
@@ -2465,12 +2444,15 @@ button.close-modal {
     width: 100%;
     float: left;
     margin-left: 0;
-    margin-right: 0; }
+    margin-right: 0;
+    text-align: center; }
   .main-header .header-phone .phone-link {
     display: none; }
   .main-header .header-phone .phone-number {
     float: none;
-    margin: 0 auto; }
+    margin: 0 auto;
+    width: 250px;
+    padding-left: 0; }
   .cermet-advantages .advantages-list-inside ul {
     margin: 0 0 1.5em 1em; }
   .adults-dentistry .adults-dentistry-offers .offer {
@@ -2486,6 +2468,11 @@ button.close-modal {
     padding-right: 20px; }
   .header-nav #mobile-header {
     padding-right: 20px; } }
+
+@media only screen and (max-width: 365px) {
+  .prosthetics .prosthetics-description .select-options ul li {
+    width: 100% !important;
+    max-width: 350px !important; } }
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 320px) {

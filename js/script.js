@@ -26,19 +26,18 @@ $(document).ready(function () {
     });
 
 
-    $('.reply').on('click', function( e ) {
+    $('.reply').on('click', function(event) {
+        event.preventDefault();
         Custombox.open({
             target: '#modal',
             effect: 'fadein'
         });
-        e.preventDefault();
+
     });
 
 
 
     $('#posle').on('click', getNext);
-
-
 
     $('#do').on('click', getPrev);
 
