@@ -676,7 +676,7 @@ body {
     opacity: 0.7; }
 
 .button-aqua {
-  background-color: #00c3d9;
+  background-color: #00c3d8;
   color: #ffffff;
   padding: 15px 10px;
   text-align: center;
@@ -703,8 +703,8 @@ body {
     opacity: 0.7; }
 
 .button-aqua-dots {
-  border-bottom: 2px dotted #00c3d9;
-  color: #00c3d9;
+  border-bottom: 2px dotted #00c3d8;
+  color: #00c3d8;
   font-weight: bold;
   text-align: center;
   transition: all 0.4s ease 0s; }
@@ -719,7 +719,7 @@ p {
 
 a {
   text-decoration: none;
-  color: #00c3d9; }
+  color: #00c3d8; }
 
 img {
   display: block; }
@@ -931,7 +931,7 @@ h4, h5, h6 {
   margin: -20px auto 0;
   padding: 0 10px;
   max-width: 94%;
-  color: #00c3d9; }
+  color: #00c3d8; }
 
 .cermet {
   padding: 30px 0; }
@@ -1242,16 +1242,16 @@ h4, h5, h6 {
     width: 113px; }
     .clinic-services .all-shares-button a {
       transition: all 0.4s ease 0s;
-      border: 1px solid #00c3d9;
+      border: 1px solid #00c3d8;
       border-radius: 6px;
-      color: #00c3d9;
+      color: #00c3d8;
       display: block;
       font-size: 18px;
       font-weight: bold;
       text-decoration: none; }
       .clinic-services .all-shares-button a:hover {
         color: #ffffff;
-        background-color: #00c3d9; }
+        background-color: #00c3d8; }
   .clinic-services .clinic-services-inside {
     padding: 30px 0;
     width: 83.0065359477%;
@@ -1412,8 +1412,8 @@ h4, h5, h6 {
   background: none; }
 
 .footer-menu .header-nav .primary_nav_wrap ul li a:hover {
-  border-bottom: 1px dashed #00c3d9;
-  color: #00c3d9; }
+  border-bottom: 1px dashed #00c3d8;
+  color: #00c3d8; }
 
 .footer-copyright {
   border-top: 1px dashed #e6e6e6;
@@ -1887,7 +1887,7 @@ SLIDER
             -ms-transition: all 0.5s ease;
             -o-transition: all 0.5s ease;
             transition: all 0.5s ease;
-            background-color: #00c3d9;
+            background-color: #00c3d8;
             color: #fff !important; }
             .prosthetics .prosthetics-description .select-options ul li a:hover:before {
               -webkit-transition: all 0.5s ease;
@@ -1936,7 +1936,7 @@ SLIDER
   .description .description-blocs:after {
     clear: both; }
   .description .description-blocs .blocs {
-    border: 1px solid #00c3d9;
+    border: 1px solid #00c3d8;
     margin-bottom: 10px;
     padding: 10px; }
     .description .description-blocs .blocs:before, .description .description-blocs .blocs:after {
@@ -1994,7 +1994,7 @@ SLIDER
     width: 60px;
     right: -18px; }
   .patients-comments .patient {
-    border: 1px solid #00c3d9;
+    border: 1px solid #00c3d8;
     padding: 10px;
     border-radius: 15px; }
     .patients-comments .patient .author-date:before, .patients-comments .patient .author-date:after {
@@ -2004,7 +2004,7 @@ SLIDER
       clear: both; }
     .patients-comments .patient .author-date .author {
       float: left;
-      color: #00c3d9; }
+      color: #00c3d8; }
     .patients-comments .patient .author-date .date {
       float: right; }
 
