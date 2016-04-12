@@ -768,6 +768,7 @@ h4, h5, h6 {
     }
     .discount-service {
       margin-right: 0;
+      cursor: pointer;
       .discount-service-inside {
         max-width: 232px;
         background: url(../images/figura16.png) no-repeat scroll 0 0;
@@ -783,7 +784,7 @@ h4, h5, h6 {
           line-height: 1.2;
           padding: 9px 20px 0;
           text-align: center;
-          a {
+          span {
             color: #000;
           }
         }
@@ -1968,4 +1969,17 @@ button.close-modal {
   .header-nav #mobile-header {
     padding-right: 10px;
   }
+}
+
+@media print {
+  footer, header, .advantages-clinic, .appointments, .methods-prosthesis, .prosthesis-examples, .prosthesis-types,
+  .popular-cermet, .cermet-advantages, .cermet, .brad-cramps, .slide,
+  .clinic-services .all-shares-button, .clinic-services .service, .clinic-services h2{
+    display: none;
+  }
+  
+  .clinic-services .discount-service.service {
+    display: block;
+  }
+
 }

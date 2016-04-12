@@ -1254,7 +1254,8 @@ h4, h5, h6 {
         padding: 6px 10px 0;
         text-align: center; }
     .clinic-services .clinic-services-inside .discount-service {
-      margin-right: 0; }
+      margin-right: 0;
+      cursor: pointer; }
       .clinic-services .clinic-services-inside .discount-service .discount-service-inside {
         max-width: 232px;
         background: url(../images/figura16.png) no-repeat scroll 0 0;
@@ -1268,7 +1269,7 @@ h4, h5, h6 {
         line-height: 1.2;
         padding: 9px 20px 0;
         text-align: center; }
-        .clinic-services .clinic-services-inside .discount-service .discount-header a {
+        .clinic-services .clinic-services-inside .discount-service .discount-header span {
           color: #000; }
       .clinic-services .clinic-services-inside .discount-service .discount-content {
         color: #3d3d3d;
@@ -2481,5 +2482,13 @@ button.close-modal {
     padding-right: 10px; }
   .header-nav #mobile-header {
     padding-right: 10px; } }
+
+@media print {
+  footer, header, .advantages-clinic, .appointments, .methods-prosthesis, .prosthesis-examples, .prosthesis-types,
+  .popular-cermet, .cermet-advantages, .cermet, .brad-cramps, .slide,
+  .clinic-services .all-shares-button, .clinic-services .service, .clinic-services h2, .clinic-services h3, .clinic-services h4, .clinic-services h5, .clinic-services h6 {
+    display: none; }
+  .clinic-services .discount-service.service {
+    display: block; } }
 
 /*# sourceMappingURL=styles.css.map */

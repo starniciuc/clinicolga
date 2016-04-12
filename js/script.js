@@ -182,6 +182,9 @@ $(document).ready(function () {
     var n = $(".owl-page").length;
     $('.owl-pagination').append('/' + n);
 
-
+    $("#printSection").click(function (e){
+        e.preventDefault();
+        window.print()
+    });
 });
 
