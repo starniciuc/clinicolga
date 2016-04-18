@@ -3,6 +3,34 @@
 @import "../bower_components/breakpoint-sass/stylesheets/breakpoint";
 @import url(http://fonts.googleapis.com/css?family=Raleway:400,500,700;);
 
+/*====================== FONT =======================*/
+@font-face {
+  font-family:'RobotoRegular';
+  src: url('../fonts/RobotoRegular.eot?#iefix') format('eot'),
+  url('../fonts/RobotoRegular.woff') format('woff'),
+  url('../fonts/RobotoRegular.ttf')  format('truetype');
+}
+@font-face {
+  font-family:'RobotoMedium';
+  src: url('../fonts/RobotoMedium.eot?#iefix') format('eot'),
+  url('../fonts/RobotoMedium.woff') format('woff'),
+  url('../fonts/RobotoMedium.ttf')  format('truetype');
+}
+@font-face {
+  font-family:'RobotoLight';
+  src: url('../fonts/RobotoLight.eot?#iefix') format('eot'),
+  url('../fonts/RobotoLight.woff') format('woff'),
+  url('../fonts/RobotoLight.ttf')  format('truetype');
+}
+@font-face {
+  font-family:'RobotoBold';
+  src: url('../fonts/RobotoBold.eot?#iefix') format('eot'),
+  url('../fonts/RobotoBold.woff') format('woff'),
+  url('../fonts/RobotoBold.ttf')  format('truetype');
+}
+
+/*====================== FONT : END =======================*/
+
 @mixin clearfix() {
   &:before,
   &:after {
@@ -47,7 +75,7 @@ $susy: (
         container-position: center,
         columns: 12,
         gutters: .30,
-        column-width: 70,
+        column-width: 75,
         global-box-sizing: content-box,
         last-flow: to,
         debug: (
@@ -67,7 +95,7 @@ $susy: (
 /*
 VARIABILES
 */
-$fonts: 'Arial', sans-serif;
+$fonts: 'RobotoLight', sans-serif;
 $white: #ffffff;
 $gold-color: #3e3e3e;
 $aqua-color: #00c3d8;
@@ -91,7 +119,7 @@ body {
 
 .wrapper {
   @include container();
-  max-width: 1100px;
+  max-width: 1150px;
   width: 100%;
   margin-top: 0;
 }
@@ -155,18 +183,13 @@ body {
 p {
   margin-bottom: 18px;
   color: #000;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.2;
 }
 
 a {
   text-decoration: none;
   color: $aqua-color;
-}
-
-img {
-  //width: 100%;
-  display: block;
 }
 
 h1 {
@@ -180,14 +203,21 @@ h1 {
 h2 {
   @extend h1;
   font-size: 25px;
-
 }
 
 h3 {
-  @extend h2;
+  font-family: 'RobotoRegular';
+  font-size: 30px;
+  margin-bottom: 30px;
 }
 
-h4, h5, h6 {
+h4 {
+  font-family: 'RobotoRegular';
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+h5, h6 {
   @extend h2;
   font-size: 18px;
 }
@@ -256,6 +286,19 @@ h4, h5, h6 {
 }
 
 /***Menu*****/
+#heder_menu .menu_li {
+  padding: 0 !important;
+}
+
+.dropdown-submenu > a:after {
+  content: "";
+  float: right;
+  margin-top: 4px;
+  margin-right: -10px;
+  border-left: 4px dashed;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+}
 
 .header-nav {
   @include clearfix;
@@ -301,11 +344,13 @@ h4, h5, h6 {
     display: inline-block;
     float: left;
     font-size: 12px;
+    font-weight: 400;
+    color: #010101;
     line-height: 26px;
     text-decoration: none;
     text-transform: uppercase;
-    padding: 0 6px;
-    border-radius: 7px;
+    border-radius: 3px !important;
+    background-color: rgba(0,0,0,0) !important;
   }
 
   .primary_nav_wrap ul li.current-menu-item {
@@ -325,8 +370,6 @@ h4, h5, h6 {
     position: absolute;
     top: 100%;
     left: 0;
-    background: #fff;
-    padding: 0
   }
 
   .primary_nav_wrap ul ul li {
@@ -362,10 +405,13 @@ h4, h5, h6 {
 
   .brad-cramps-inside {
     background-color: #fff;
-    margin: -20px auto 0;
-    padding: 0 10px;
+    margin: -25px auto 0;
+    padding: 2px 15px;
     max-width: 94%;
     color: $aqua-color;
+    a {
+      font-size: 16px;
+    }
   }
 }
 

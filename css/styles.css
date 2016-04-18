@@ -3,10 +3,8 @@
 html, body, div, span, applet, object, iframe,
 h1,
 h2,
-h3,
-h4,
 h5,
-h6, h2, h3, h4, h5, h6, h3, h4, h5, h6, p, blockquote, pre,
+h6, h2, h5, h6, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, font, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
@@ -107,10 +105,8 @@ textarea {
   font-size: 1.6rem;
   line-height: 1.5; }
 
-h1, h2, h3, h4, h5, h6,
+h1, h2, h5, h6,
 h2,
-h3,
-h4,
 h5,
 h6,
 h3,
@@ -621,6 +617,24 @@ object {
 .gallery-caption {
   display: block; }
 
+/*====================== FONT =======================*/
+@font-face {
+  font-family: 'RobotoRegular';
+  src: url("../fonts/RobotoRegular.eot?#iefix") format("eot"), url("../fonts/RobotoRegular.woff") format("woff"), url("../fonts/RobotoRegular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'RobotoMedium';
+  src: url("../fonts/RobotoMedium.eot?#iefix") format("eot"), url("../fonts/RobotoMedium.woff") format("woff"), url("../fonts/RobotoMedium.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'RobotoLight';
+  src: url("../fonts/RobotoLight.eot?#iefix") format("eot"), url("../fonts/RobotoLight.woff") format("woff"), url("../fonts/RobotoLight.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'RobotoBold';
+  src: url("../fonts/RobotoBold.eot?#iefix") format("eot"), url("../fonts/RobotoBold.woff") format("woff"), url("../fonts/RobotoBold.ttf") format("truetype"); }
+
+/*====================== FONT : END =======================*/
 /*
 Grids
 */
@@ -631,7 +645,7 @@ VARIABILES
 Global
 */
 body {
-  font-family: "Arial", sans-serif;
+  font-family: "RobotoLight", sans-serif;
   background: rgba(255, 255, 255, 0.58) none repeat scroll 0 0;
   margin: 0;
   padding: 0;
@@ -647,10 +661,10 @@ body {
     clear: both; }
 
 .wrapper {
-  max-width: 1071;
+  max-width: 1147.5;
   margin-left: auto;
   margin-right: auto;
-  max-width: 1100px;
+  max-width: 1150px;
   width: 100%;
   margin-top: 0; }
   .wrapper:after {
@@ -714,27 +728,34 @@ body {
 p {
   margin-bottom: 18px;
   color: #000;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.2; }
 
 a {
   text-decoration: none;
   color: #00c3d8; }
 
-img {
-  display: block; }
-
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h5, h6 {
   margin-bottom: 30px;
   text-align: center;
   font-size: 32px;
   line-height: 30px;
   color: #000; }
 
-h2, h3, h4, h5, h6 {
+h2, h5, h6 {
   font-size: 25px; }
 
-h4, h5, h6 {
+h3 {
+  font-family: 'RobotoRegular';
+  font-size: 30px;
+  margin-bottom: 30px; }
+
+h4 {
+  font-family: 'RobotoRegular';
+  font-size: 24px;
+  margin-bottom: 15px; }
+
+h5, h6 {
   font-size: 18px; }
 
 .main-header .right-side-menu {
@@ -807,6 +828,18 @@ h4, h5, h6 {
         transition: all 0.4s ease 0s; }
 
 /***Menu*****/
+#heder_menu .menu_li {
+  padding: 0 !important; }
+
+.dropdown-submenu > a:after {
+  content: "";
+  float: right;
+  margin-top: 4px;
+  margin-right: -10px;
+  border-left: 4px dashed;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent; }
+
 .header-nav {
   height: 50px; }
   .header-nav:before, .header-nav:after {
@@ -849,11 +882,13 @@ h4, h5, h6 {
     display: inline-block;
     float: left;
     font-size: 12px;
+    font-weight: 400;
+    color: #010101;
     line-height: 26px;
     text-decoration: none;
     text-transform: uppercase;
-    padding: 0 6px;
-    border-radius: 7px; }
+    border-radius: 3px !important;
+    background-color: transparent !important; }
   .header-nav .primary_nav_wrap ul li:hover {
     background-image: -o-linear-gradient(to right, #66b5ce 0%, #6cbfd5 100%);
     background-image: -moz-linear-gradient(to right, #66b5ce 0%, #6cbfd5 100%);
@@ -865,9 +900,7 @@ h4, h5, h6 {
     display: none;
     position: absolute;
     top: 100%;
-    left: 0;
-    background: #fff;
-    padding: 0; }
+    left: 0; }
   .header-nav .primary_nav_wrap ul ul li {
     float: none;
     width: 200px; }
@@ -896,10 +929,12 @@ h4, h5, h6 {
 
 .brad-cramps .brad-cramps-inside {
   background-color: #fff;
-  margin: -20px auto 0;
-  padding: 0 10px;
+  margin: -25px auto 0;
+  padding: 2px 15px;
   max-width: 94%;
   color: #00c3d8; }
+  .brad-cramps .brad-cramps-inside a {
+    font-size: 16px; }
 
 .cermet {
   padding: 30px 0; }
@@ -908,7 +943,7 @@ h4, h5, h6 {
     display: table; }
   .cermet:after {
     clear: both; }
-  .cermet h1, .cermet h2, .cermet h3, .cermet h4, .cermet h5, .cermet h6 {
+  .cermet h1, .cermet h2, .cermet h5, .cermet h6 {
     font-size: 46px;
     font-weight: bold; }
   .cermet .description {
@@ -945,7 +980,7 @@ h4, h5, h6 {
   border-bottom: 1px dashed #e6e6e6;
   margin: 20px 0;
   width: 100%; }
-  .cermet-advantages h2, .cermet-advantages h3, .cermet-advantages h4, .cermet-advantages h5, .cermet-advantages h6 {
+  .cermet-advantages h2, .cermet-advantages h5, .cermet-advantages h6 {
     font-size: 36px;
     margin-top: 24px; }
   .cermet-advantages .advantages-list {
@@ -986,7 +1021,7 @@ h4, h5, h6 {
     text-align: center;
     margin-top: 100px; }
 
-.popular-cermet h2, .popular-cermet h3, .popular-cermet h4, .popular-cermet h5, .popular-cermet h6 {
+.popular-cermet h2, .popular-cermet h5, .popular-cermet h6 {
   font-size: 30px;
   padding-top: 15px; }
 
@@ -1038,7 +1073,7 @@ h4, h5, h6 {
 .prosthesis-types {
   border-top: 1px dashed #e6e6e6;
   padding: 30px 0; }
-  .prosthesis-types h2, .prosthesis-types h3, .prosthesis-types h4, .prosthesis-types h5, .prosthesis-types h6 {
+  .prosthesis-types h2, .prosthesis-types h5, .prosthesis-types h6 {
     font-size: 30px; }
   .prosthesis-types .type-list {
     margin: 0 auto;
@@ -1076,9 +1111,9 @@ h4, h5, h6 {
     padding: 50px 0; }
   .prosthesis-examples #owl-demo-bottom {
     text-align: justify; }
-    .prosthesis-examples #owl-demo-bottom h2, .prosthesis-examples #owl-demo-bottom h3, .prosthesis-examples #owl-demo-bottom h4, .prosthesis-examples #owl-demo-bottom h5, .prosthesis-examples #owl-demo-bottom h6 {
+    .prosthesis-examples #owl-demo-bottom h2, .prosthesis-examples #owl-demo-bottom h5, .prosthesis-examples #owl-demo-bottom h6 {
       text-align: left; }
-  .prosthesis-examples #owl-demo-prosthetics-v1 .item-content h2, .prosthesis-examples #owl-demo-prosthetics-v1 .item-content h3, .prosthesis-examples #owl-demo-prosthetics-v1 .item-content h4, .prosthesis-examples #owl-demo-prosthetics-v1 .item-content h5, .prosthesis-examples #owl-demo-prosthetics-v1 .item-content h6 {
+  .prosthesis-examples #owl-demo-prosthetics-v1 .item-content h2, .prosthesis-examples #owl-demo-prosthetics-v1 .item-content h5, .prosthesis-examples #owl-demo-prosthetics-v1 .item-content h6 {
     text-align: left;
     margin-bottom: 15px; }
   .prosthesis-examples #owl-demo-prosthetics-v1 .image-item {
@@ -1089,7 +1124,7 @@ h4, h5, h6 {
 .methods-prosthesis {
   padding: 30px 0;
   padding-bottom: 50px; }
-  .methods-prosthesis h2, .methods-prosthesis h3, .methods-prosthesis h4, .methods-prosthesis h5, .methods-prosthesis h6 {
+  .methods-prosthesis h2, .methods-prosthesis h5, .methods-prosthesis h6 {
     font-size: 30px;
     margin-top: 15px; }
   .methods-prosthesis .first-method .method-description p span {
@@ -1169,7 +1204,7 @@ h4, h5, h6 {
 
 .advantages-clinic {
   padding: 30px 0; }
-  .advantages-clinic h2, .advantages-clinic h3, .advantages-clinic h4, .advantages-clinic h5, .advantages-clinic h6 {
+  .advantages-clinic h2, .advantages-clinic h5, .advantages-clinic h6 {
     background: url(../images/tooth.png) no-repeat;
     font-size: 30px;
     height: 37px;
@@ -1190,7 +1225,7 @@ h4, h5, h6 {
 .clinic-services {
   border-top: 1px dashed #e6e6e6;
   padding-top: 30px; }
-  .clinic-services h2, .clinic-services h3, .clinic-services h4, .clinic-services h5, .clinic-services h6 {
+  .clinic-services h2, .clinic-services h5, .clinic-services h6 {
     background: url(../images/akcia.png) no-repeat scroll left center;
     font-size: 30px;
     font-weight: normal;
@@ -1445,11 +1480,11 @@ SLIDER
   text-align: center;
   padding: 40px 70px;
   background: rgba(255, 255, 255, 0.5); }
-  .desc-slider h2, .desc-slider h3, .desc-slider h4, .desc-slider h5, .desc-slider h6 {
+  .desc-slider h2, .desc-slider h5, .desc-slider h6 {
     text-transform: uppercase;
     font-weight: 700;
     color: #353535; }
-  .desc-slider h2, .desc-slider h3, .desc-slider h4, .desc-slider h5, .desc-slider h6, .desc-slider p {
+  .desc-slider h2, .desc-slider h5, .desc-slider h6, .desc-slider p {
     margin-bottom: 15px; }
   .desc-slider p {
     font-size: 17px;
@@ -1603,7 +1638,7 @@ SLIDER
   margin-right: 1.9607843137%; }
   .item-content:last-child {
     margin-right: 0; }
-  .item-content h2, .item-content h3, .item-content h4, .item-content h5, .item-content h6 {
+  .item-content h2, .item-content h5, .item-content h6 {
     color: #0095b9;
     font-size: 30px;
     line-height: 1; }
@@ -1612,10 +1647,10 @@ SLIDER
 /*adults-dentistry page start*/
 .adults-dentistry {
   padding-top: 30px; }
-  .adults-dentistry h1, .adults-dentistry h2, .adults-dentistry h3, .adults-dentistry h4, .adults-dentistry h5, .adults-dentistry h6 {
+  .adults-dentistry h1, .adults-dentistry h2, .adults-dentistry h5, .adults-dentistry h6 {
     font-size: 48px;
     margin-bottom: 15px; }
-  .adults-dentistry#prosthetics h2, .adults-dentistry#prosthetics h3, .adults-dentistry#prosthetics h4, .adults-dentistry#prosthetics h5, .adults-dentistry#prosthetics h6 {
+  .adults-dentistry#prosthetics h2, .adults-dentistry#prosthetics h5, .adults-dentistry#prosthetics h6 {
     font-size: 30px; }
   .adults-dentistry#prosthetics .all-offers:before, .adults-dentistry#prosthetics .all-offers:after {
     content: "";
@@ -1780,7 +1815,7 @@ SLIDER
 .save-with-us {
   padding-top: 50px;
   padding-bottom: 20px; }
-  .save-with-us h2, .save-with-us h3, .save-with-us h4, .save-with-us h5, .save-with-us h6 {
+  .save-with-us h2, .save-with-us h5, .save-with-us h6 {
     font-size: 30px; }
   .save-with-us .save-offer {
     padding: 25px 0 60px; }
@@ -1817,7 +1852,7 @@ SLIDER
   border-bottom: 1px dashed #e6e6e6;
   padding-top: 30px;
   padding-bottom: 35px; }
-  .prosthetics h1, .prosthetics h2, .prosthetics h3, .prosthetics h4, .prosthetics h5, .prosthetics h6 {
+  .prosthetics h1, .prosthetics h2, .prosthetics h5, .prosthetics h6 {
     font-size: 48px; }
   .prosthetics .prosthetics-description {
     width: 66.0130718954%;
@@ -1898,7 +1933,7 @@ SLIDER
 .description {
   padding: 30px;
   padding-top: 50px; }
-  .description h2, .description h3, .description h4, .description h5, .description h6 {
+  .description h2, .description h5, .description h6 {
     font-size: 36px; }
   .description h3 {
     font-size: 18px;
@@ -1949,7 +1984,7 @@ SLIDER
 
 .patients-comments {
   padding-top: 30px; }
-  .patients-comments h2, .patients-comments h3, .patients-comments h4, .patients-comments h5, .patients-comments h6 {
+  .patients-comments h2, .patients-comments h5, .patients-comments h6 {
     font-size: 30px; }
   .patients-comments .patients-comments-inside {
     padding: 30px 0; }
@@ -2193,137 +2228,89 @@ button.close-modal {
     margin-right: 0; } }
 
 @media only screen and (max-width: 640px) {
-  .cermet h1, .cermet h2, .cermet h3, .cermet h4, .cermet h5, .cermet h6, .cermet h2, .cermet h3, .cermet h4, .cermet h5, .cermet h6,
+  .cermet h1, .cermet h2, .cermet h5, .cermet h6, .cermet h2, .cermet h5, .cermet h6,
   .cermet-advantages h1,
   .cermet-advantages h2,
-  .cermet-advantages h3,
-  .cermet-advantages h4,
   .cermet-advantages h5,
   .cermet-advantages h6,
   .cermet-advantages h2,
-  .cermet-advantages h3,
-  .cermet-advantages h4,
   .cermet-advantages h5,
   .cermet-advantages h6,
   .popular-cermet h1,
   .popular-cermet h2,
-  .popular-cermet h3,
-  .popular-cermet h4,
   .popular-cermet h5,
   .popular-cermet h6,
   .popular-cermet h2,
-  .popular-cermet h3,
-  .popular-cermet h4,
   .popular-cermet h5,
   .popular-cermet h6,
   .prosthesis-types h1,
   .prosthesis-types h2,
-  .prosthesis-types h3,
-  .prosthesis-types h4,
   .prosthesis-types h5,
   .prosthesis-types h6,
   .prosthesis-types h2,
-  .prosthesis-types h3,
-  .prosthesis-types h4,
   .prosthesis-types h5,
   .prosthesis-types h6,
   .item-content h1,
   .item-content h2,
-  .item-content h3,
-  .item-content h4,
   .item-content h5,
   .item-content h6,
   .item-content h2,
-  .item-content h3,
-  .item-content h4,
   .item-content h5,
   .item-content h6,
   .methods-prosthesis h1,
   .methods-prosthesis h2,
-  .methods-prosthesis h3,
-  .methods-prosthesis h4,
   .methods-prosthesis h5,
   .methods-prosthesis h6,
   .methods-prosthesis h2,
-  .methods-prosthesis h3,
-  .methods-prosthesis h4,
   .methods-prosthesis h5,
   .methods-prosthesis h6,
   .advantages-clinic h1,
   .advantages-clinic h2,
-  .advantages-clinic h3,
-  .advantages-clinic h4,
   .advantages-clinic h5,
   .advantages-clinic h6,
   .advantages-clinic h2,
-  .advantages-clinic h3,
-  .advantages-clinic h4,
   .advantages-clinic h5,
   .advantages-clinic h6,
   .adults-dentistry h1,
   .adults-dentistry h2,
-  .adults-dentistry h3,
-  .adults-dentistry h4,
   .adults-dentistry h5,
   .adults-dentistry h6,
   .adults-dentistry h2,
-  .adults-dentistry h3,
-  .adults-dentistry h4,
   .adults-dentistry h5,
   .adults-dentistry h6,
   .save-with-us h1,
   .save-with-us h2,
-  .save-with-us h3,
-  .save-with-us h4,
   .save-with-us h5,
   .save-with-us h6,
   .save-with-us h2,
-  .save-with-us h3,
-  .save-with-us h4,
   .save-with-us h5,
   .save-with-us h6,
   .about h1,
   .about h2,
-  .about h3,
-  .about h4,
   .about h5,
   .about h6,
   .about h2,
-  .about h3,
-  .about h4,
   .about h5,
   .about h6,
   .prosthetics h1,
   .prosthetics h2,
-  .prosthetics h3,
-  .prosthetics h4,
   .prosthetics h5,
   .prosthetics h6,
   .prosthetics h2,
-  .prosthetics h3,
-  .prosthetics h4,
   .prosthetics h5,
   .prosthetics h6,
   .description-inside h1,
   .description-inside h2,
-  .description-inside h3,
-  .description-inside h4,
   .description-inside h5,
   .description-inside h6,
   .description-inside h2,
-  .description-inside h3,
-  .description-inside h4,
   .description-inside h5,
   .description-inside h6,
   .patients-comments h1,
   .patients-comments h2,
-  .patients-comments h3,
-  .patients-comments h4,
   .patients-comments h5,
   .patients-comments h6,
   .patients-comments h2,
-  .patients-comments h3,
-  .patients-comments h4,
   .patients-comments h5,
   .patients-comments h6 {
     font-size: 24px;
@@ -2486,7 +2473,7 @@ button.close-modal {
 @media print {
   footer, header, .advantages-clinic, .appointments, .methods-prosthesis, .prosthesis-examples, .prosthesis-types,
   .popular-cermet, .cermet-advantages, .cermet, .brad-cramps, .slide,
-  .clinic-services .all-shares-button, .clinic-services .service, .clinic-services h2, .clinic-services h3, .clinic-services h4, .clinic-services h5, .clinic-services h6 {
+  .clinic-services .all-shares-button, .clinic-services .service, .clinic-services h2, .clinic-services h5, .clinic-services h6 {
     display: none; }
   .clinic-services .discount-service.service {
     display: block; } }
