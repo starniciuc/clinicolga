@@ -6,7 +6,7 @@ $(document).ready(function () {
     });
 
 
-    $(".sidr-class-primary_nav_wrap ul li a").click(function (event) {
+    $(".sidr-class-primary_nav_wrap ul li.sidr-class-dropdown a").click(function (event) {
         event.preventDefault();
         $(this).next('ul').slideToggle('slow');
     });
