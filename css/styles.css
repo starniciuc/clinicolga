@@ -831,7 +831,7 @@ h5, h6 {
   padding: 0 !important; }
 
 #heder_menu .menu_li > a {
-  font-size: 12px; }
+  font-size: 13px; }
 
 .dropdown-submenu > a:after {
   content: "";
@@ -883,7 +883,6 @@ h5, h6 {
     position: relative;
     display: inline-block;
     float: left;
-    font-size: 12px;
     font-weight: 400;
     color: #010101;
     line-height: 26px;
