@@ -347,6 +347,7 @@ h5, h6 {
     display: inline-block;
     float: left;
     font-weight: 400;
+    font-size: 13px;
     color: #010101;
     line-height: 26px;
     text-decoration: none;
@@ -1168,9 +1169,8 @@ SLIDER
   display: none;
 }
 
-.slideshow img:first-child {
+.slideshow img.visible-image {
   display: block;
-  /* overrides the previous style */
 }
 
 .image-item {
@@ -1362,7 +1362,8 @@ SLIDER
 .hover-image-wrap {
   position: relative;
   width: 100%;
-  height: auto;
+  height: 240px;
+  overflow: hidden;
   img {
     text-align: left;
     width: 100%;
@@ -1529,6 +1530,7 @@ SLIDER
         img {
           margin: 0 auto;
           display: block;
+          width: 100%;
         }
       }
       .bloc-content {

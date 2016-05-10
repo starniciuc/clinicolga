@@ -884,6 +884,7 @@ h5, h6 {
     display: inline-block;
     float: left;
     font-weight: 400;
+    font-size: 13px;
     color: #010101;
     line-height: 26px;
     text-decoration: none;
@@ -1605,9 +1606,8 @@ SLIDER
 .slideshow img {
   display: none; }
 
-.slideshow img:first-child {
-  display: block;
-  /* overrides the previous style */ }
+.slideshow img.visible-image {
+  display: block; }
 
 .image-item {
   width: 49.0196078431%;
@@ -1788,7 +1788,8 @@ SLIDER
 .hover-image-wrap {
   position: relative;
   width: 100%;
-  height: auto; }
+  height: 240px;
+  overflow: hidden; }
   .hover-image-wrap img {
     text-align: left;
     width: 100%;
@@ -1964,7 +1965,8 @@ SLIDER
       margin-right: 1.9607843137%; }
       .description .description-blocs .blocs .bloc-image img {
         margin: 0 auto;
-        display: block; }
+        display: block;
+        width: 100%; }
     .description .description-blocs .blocs .bloc-content {
       width: 49.0196078431%;
       float: left;

@@ -1,3 +1,6 @@
+var firstImage = "";
+var secondImage = "";
+
 $(document).ready(function () {
     $('#responsive-menu-button').sidr({
         name: 'sidr-main',
@@ -35,33 +38,28 @@ $(document).ready(function () {
 
     });
 
+    firstImage = function() {
+        var $parentBlock = $(this).parents(".item-bottom-slider");
+        var images = $parentBlock.find("img")
 
-
-    $('#posle').on('click', getNext);
-
-    $('#do').on('click', getPrev);
-
-    function getNext() {
-        var $curr = $('.slideshow img:visible'),
-            $next = ($curr.next().length) ? $curr.next() : $('.slideshow img').first();
-
-        transition($curr, $next);
+        $(images).each(function (i, val) {
+            if ($(val).hasClass("visible-image"))
+                $(val).removeClass("visible-image")
+            else
+                $(val).addClass("visible-image")
+        })
     }
 
-    function getPrev() {
-        var $curr = $('.slideshow img:visible'),
-            $next = ($curr.prev().length) ? $curr.prev() : $('.slideshow img').last();
-        transition($curr, $next);
+    secondImage = function() {
+        var $parentBlock = $(this).parents(".item-bottom-slider");
+        var images = $parentBlock.find("img")
 
-    }
-
-    function transition($curr, $next) {
-
-        $next.css('display', 'block').fadeIn('slow', function () {
-            $curr.hide().css('display', 'none');
-            $next.css('display', 'block');
-        });
-
+        $(images).each(function (i, val) {
+            if ($(val).hasClass("visible-image"))
+                $(val).removeClass("visible-image")
+            else
+                $(val).addClass("visible-image")
+        })
     }
 
     $( '.select-image button' ).on( 'click', function() {
