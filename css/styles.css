@@ -1692,29 +1692,13 @@ SLIDER
       display: table; }
     .adults-dentistry .adults-dentistry-offers:after {
       clear: both; }
+    .adults-dentistry .adults-dentistry-offers .owl-buttons {
+      margin-top: 30px; }
     .adults-dentistry .adults-dentistry-offers .offer {
-      width: 23.5294117647%;
-      float: left;
+      margin: 0 10px;
       border: 1px solid #ededed;
       border-radius: 6px;
       margin-bottom: 8px; }
-      .adults-dentistry .adults-dentistry-offers .offer:nth-child(4n + 1) {
-        margin-left: 0;
-        margin-right: -100%;
-        clear: both;
-        margin-left: 0; }
-      .adults-dentistry .adults-dentistry-offers .offer:nth-child(4n + 2) {
-        margin-left: 25.4901960784%;
-        margin-right: -100%;
-        clear: none; }
-      .adults-dentistry .adults-dentistry-offers .offer:nth-child(4n + 3) {
-        margin-left: 50.9803921569%;
-        margin-right: -100%;
-        clear: none; }
-      .adults-dentistry .adults-dentistry-offers .offer:nth-child(4n + 4) {
-        margin-left: 76.4705882353%;
-        margin-right: -100%;
-        clear: none; }
       .adults-dentistry .adults-dentistry-offers .offer:nth-child(4n) {
         margin-right: 0; }
       .adults-dentistry .adults-dentistry-offers .offer .offer-description {

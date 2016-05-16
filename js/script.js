@@ -8,10 +8,9 @@ $(document).ready(function () {
         source: '#navigation'
     });
 
-
-    $(".sidr-class-primary_nav_wrap ul li.sidr-class-dropdown a").click(function (event) {
-        event.preventDefault();
-        $(this).next('ul').slideToggle('slow');
+    $('.sidr-class-dropdown > a').click(function(e) {
+        e.preventDefault();
+        $(this).next().slideToggle();
     });
 
     $('header, main, footer').click(function () {
@@ -20,12 +19,20 @@ $(document).ready(function () {
 
     $('.show').on("click", function (event) {
         event.preventDefault();
-        $(this).parent().find(".list-to-show").fadeToggle(200);
+        $(".list-to-show").fadeOut(200);
+
+        if($(this).hasClass("open")) {
+            $(this).removeClass("open");
+        }
+        else {
+            $(this).parent().find(".list-to-show").fadeIn(200);
+            $(this).addClass("open");
+        }
     });
 
     $('.hide').on("click", function (event) {
         event.preventDefault();
-        $(this).parents(".list-to-show").fadeToggle(200);
+        $(this).parents(".list-to-show").fadeOut(200);
     });
 
 
@@ -136,6 +143,20 @@ $(document).ready(function () {
         itemsMobile: false, // itemsMobile disabled - inherit from itemsTablet option
         autoPlay: true,
         pagination: false,
+        paginationNumbers: false
+    });
+
+    $("#specialistsSlider").owlCarousel({
+        center: true,
+        navigationText: ["<img src='images/left.png' class='arrow-left-bottom'>", "<img src='images/right.png' class='arrow-right-bottom'>"],
+        items: 4, //10 items above 1000px browser width
+        itemsDesktop: [1050, 2], //5 items between 1000px and 901px
+        itemsDesktopSmall: [750, 1], // betweem 900px and 601px
+        itemsTablet: [0, 1], //2 items between 600 and 0
+        itemsMobile: false, // itemsMobile disabled - inherit from itemsTablet option
+        autoPlay: true,
+        pagination: true,
+        navigation: true,
         paginationNumbers: false
     });
 
