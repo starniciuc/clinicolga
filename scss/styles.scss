@@ -1263,8 +1263,12 @@ SLIDER
     .owl-buttons{
       margin-top: 30px;
     }
+    &.services {
+      .offer {
+        @include gallery(3);
+      }
+    }
     .offer {
-      //@include gallery(3);
       margin: 0 10px;
       border: 1px solid #ededed;
       border-radius: 6px;
